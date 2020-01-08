@@ -11,4 +11,8 @@ describe('Make sure that the binarySearch functions works correctly', () => {
     expect(binarySearch(sortedArray, 5)).toBe(4);
   });
   // it should return -1 if there is no matching value
+  it('should return -1 if there is not a matching value', () => {
+    expect(binarySearch(sortedArray, 11)).toBe(-1);
+
+  });
 });
