@@ -4,8 +4,10 @@ const LinkedList = require('../linked-list');
 
 describe('testing linked list', () => {
   
+  let list;
+
   beforeEach( () => {
-    let list = new LinkedList();
+    list = new LinkedList();
   });
 
   it('can successfully instatiate an empty linked list', () => {
