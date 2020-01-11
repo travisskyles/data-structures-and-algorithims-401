@@ -47,6 +47,8 @@ describe('testing linked list', () => {
     list.insert(3);
 
     expect(list.includes(4)).toBeFalsy();
+    expect(list.includes(3)).toBeTruthy();
+
   });
 
   it('can properly return a collection of all the values that exist in the linked list', () => {
