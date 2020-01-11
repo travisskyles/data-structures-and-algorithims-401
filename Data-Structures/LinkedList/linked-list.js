@@ -34,15 +34,14 @@ class Linkedlist {
    * @memberof Linkedlist
    */
   includes(value){
-    let current = this.head;
-    while( current !== null){
-      if(current === value){
+    let currentNode = this.head;
+    while(currentNode){
+      if(currentNode.value === value){
         return true;
       }
-      else {
-        return false;
-      }
+      currentNode = currentNode.next;
     }
+    return false;
   }
 
   /**
@@ -61,8 +60,8 @@ let list = new Linkedlist();
 
 list.insert(1);
 list.insert(50);
-list.insert('hi');
-
+// list.insert('hi');
 console.log(list);
+console.log(list.includes(1));
 
 module.exports = Linkedlist;
