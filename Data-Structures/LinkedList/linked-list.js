@@ -35,6 +35,7 @@ class Linkedlist {
 
   /**
    * creates a string representing all the values of the Linked List
+   * in format "{ a } -> { b } -> { c } -> NULL"
    * @memberof Linkedlist
    */
   toString(){
@@ -45,3 +46,4 @@ class Linkedlist {
 }
 
 
+module.exports = { Node, Linkedlist };
