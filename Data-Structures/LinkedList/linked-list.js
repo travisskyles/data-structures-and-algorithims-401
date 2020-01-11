@@ -18,9 +18,9 @@ class Linkedlist {
    * @memberof Linkedlist
    */
   insert(value){
-    let newNode = new Node(value);
-    newNode.next = this.head;
-    this.head = newNode;
+    // let newNode = new Node(value);
+    // newNode.next = this.head;
+    // this.head = newNode;
   }
   
   /**

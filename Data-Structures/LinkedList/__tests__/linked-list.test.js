@@ -1,6 +1,6 @@
 'use strict';
 
-const LinkedList = requre('../linked-list');
+const LinkedList = require('../linked-list');
 
 describe('testing linked list', () => {
   
@@ -17,18 +17,25 @@ describe('testing linked list', () => {
   });
 
   it('the head property will properly point to the first node on the linked list', () => {
-
+    list.insert(1);
+    let testList = list.includes(1);
+    expect(list.head).toBe(testList.next);
   });
 
   it('can properly insert multiple nodes into the linked list', () => {
+    list.insert(1);
+    list.insert(2);
+    list.insert(3);
 
+    expect(list.head).toBe('3');
+    expect(list.toString()).toBe('{ 1 } -> { 2 } -> { 3 } -> NULL');
   });
 
   it('will return true when finding a value within the linked list that exists', () => {
 
   });
 
-  it('will return false when searching for a value in the linked list that does not exist', () = {
+  it('will return false when searching for a value in the linked list that does not exist', () => {
 
   });
 
