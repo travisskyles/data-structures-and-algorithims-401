@@ -7,6 +7,10 @@ class Node {
   }
 }
 
+/**
+ *
+ * @class Linkedlist
+ */
 class Linkedlist {
   constructor(){
     this.head = null;
@@ -45,5 +49,6 @@ class Linkedlist {
 
 }
 
+console.log(new Linkedlist());
 
-module.exports = { Node, Linkedlist };
+module.exports = Linkedlist;

@@ -1,13 +1,13 @@
 'use strict';
 
-const LinkedList = require('../linked-list');
+const Linkedlist = require('../linked-list');
 
 describe('testing linked list', () => {
   
   let list;
 
   beforeEach( () => {
-    list = new LinkedList();
+    list = new Linkedlist;
   });
 
   it('can successfully instatiate an empty linked list', () => {
@@ -34,6 +34,7 @@ describe('testing linked list', () => {
   });
 
   it('will return true when finding a value within the linked list that exists', () => {
+    
     expect(list.includes).toBeTruthy();
   });
 
