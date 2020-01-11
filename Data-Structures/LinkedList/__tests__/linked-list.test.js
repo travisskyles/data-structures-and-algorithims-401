@@ -34,15 +34,20 @@ describe('testing linked list', () => {
   });
 
   it('will return true when finding a value within the linked list that exists', () => {
-
+    expect(list.includes).toBeTruthy();
   });
 
   it('will return false when searching for a value in the linked list that does not exist', () => {
-
+    expect(list.includes).toBeFalsy();
   });
 
   it('can properly return a collection of all the values that exist in the linked list', () => {
+    list.insert(1);
+    list.insert(2);
+    list.insert(3);
 
+    expect(list.head).toBe('3');
+    expect(list.toString()).toBe('{ 1 } -> { 2 } -> { 3 } -> NULL');
   });
 
 });
