@@ -22,9 +22,9 @@ class Linkedlist {
    * @memberof Linkedlist
    */
   insert(value){
-    // let newNode = new Node(value);
-    // newNode.next = this.head;
-    // this.head = newNode;
+    let newNode = new Node(value);
+    newNode.next = this.head;
+    this.head = newNode;
   }
   
   /**
@@ -34,7 +34,15 @@ class Linkedlist {
    * @memberof Linkedlist
    */
   includes(value){
-
+    let current = this.head;
+    while( current !== null){
+      if(current === value){
+        return true;
+      }
+      else {
+        return false;
+      }
+    }
   }
 
   /**
@@ -49,6 +57,12 @@ class Linkedlist {
 
 }
 
-console.log(new Linkedlist());
+let list = new Linkedlist();
+
+list.insert(1);
+list.insert(50);
+list.insert('hi');
+
+console.log(list);
 
 module.exports = Linkedlist;

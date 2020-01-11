@@ -15,7 +15,8 @@ describe('testing linked list', () => {
   }),
 
   it('can properly insert into the linked list', () => {
-    expect(list.include).toBeTruthy();
+    list.insert(1);
+    expect(list.include(1)).toBeTruthy();
   });
 
   it('the head property will properly point to the first node on the linked list', () => {
