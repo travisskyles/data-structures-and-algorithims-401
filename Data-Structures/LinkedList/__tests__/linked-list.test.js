@@ -1,13 +1,19 @@
 'use strict';
 
-describe('linked list functions work properly', () => {
+const LinkedList = requre('../linked-list');
+
+describe('testing linked list', () => {
+  
+  beforeEach( () => {
+    let list = new LinkedList();
+  });
 
   it('can successfully instatiate an empty linked list', () => {
-
+    expect(list.head).toBeNull();
   }),
 
   it('can properly insert into the linked list', () => {
-
+    expect(list.include).toBeTruthy();
   });
 
   it('the head property will properly point to the first node on the linked list', () => {
@@ -29,7 +35,7 @@ describe('linked list functions work properly', () => {
   it('can properly return a collection of all the values that exist in the linked list', () => {
 
   });
-  
+
 });
 
 
