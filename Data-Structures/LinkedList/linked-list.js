@@ -50,7 +50,14 @@ class Linkedlist {
    * @memberof Linkedlist
    */
   toString(){
+    let currentNode = this.head;
+    let string = 'head';
 
+    while(currentNode){
+      string = `${string} -> {${currentNode.value}}`;
+      currentNode = currentNode.next;
+    }
+    return `${string} -> NULL`;
   }
 
 
@@ -59,9 +66,10 @@ class Linkedlist {
 let list = new Linkedlist();
 
 list.insert(1);
-list.insert(50);
-// list.insert('hi');
-console.log(list);
-console.log(list.includes(1));
+list.insert(2);
+list.insert(3);
+// console.log(list);
+// console.log(list.head.next.next);
+console.log(list.toString());
 
 module.exports = Linkedlist;

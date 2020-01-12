@@ -21,8 +21,12 @@ describe('testing linked list', () => {
 
   it('the head property will properly point to the first node on the linked list', () => {
     list.insert(1);
+    list.insert(2);
+    list.insert(3);
+
     let testList = list.includes(1);
-    expect(list.head).toBe(testList.next);
+
+    expect(list.head.value).toEqual(3);
   });
 
   it('can properly insert multiple nodes into the linked list', () => {
@@ -30,8 +34,8 @@ describe('testing linked list', () => {
     list.insert(2);
     list.insert(3);
 
-    expect(list.head).toBe('3');
-    expect(list.toString()).toBe('{ 1 } -> { 2 } -> { 3 } -> NULL');
+    expect(list.head.value).toBe(3);
+    expect(list.toString()).toBe('head -> {3} -> {2} -> {1} -> NULL');
   });
 
   it('will return true when finding a value within the linked list that exists', () => {
@@ -57,8 +61,8 @@ describe('testing linked list', () => {
     list.insert(2);
     list.insert(3);
 
-    expect(list.head).toBe('3');
-    expect(list.toString()).toBe('{ 1 } -> { 2 } -> { 3 } -> NULL');
+    expect(list.head.value).toBe(3);
+    expect(list.toString()).toBe('head -> {3} -> {2} -> {1} -> NULL');
   });
 
 });
