@@ -63,13 +63,8 @@ class Linkedlist {
 
 }
 
-let list = new Linkedlist();
-
-list.insert(1);
-list.insert(2);
-list.insert(3);
-// console.log(list);
-// console.log(list.head.next.next);
-console.log(list.toString());
-
+/**
+ * export linkedlist class
+ * @module Linkedlist
+ */
 module.exports = Linkedlist;
