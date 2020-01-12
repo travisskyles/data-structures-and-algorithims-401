@@ -5,21 +5,17 @@ Create a singly liked list module.
 ## Challenge
 
 - Create a Node class that has properties for the value stored in the Node, and a pointer to the next Node.
-- Within your LinkedList class, include a head property. Upon instantiation, an empty Linked List should be created.
-  - Define a method called insert which takes any value as an argument and adds a new node with that value to the head of the list with an O(1) Time performance.
-  - Define a method called includes which takes any value as an argument and returns a boolean result depending on whether that value exists as a Node’s value somewhere within the list.
-  - Define a method called toString which takes in no arguments and returns a string representing all the values in the Linked List, formatted as:
-    - "{ a } -> { b } -> { c } -> NULL"
-- Any exceptions or errors that come from your code should be semantic, capturable errors. For example, rather than a default error thrown by your language, your code should raise/throw a custom, semantic error that describes what went wrong in calling the methods you wrote for this lab.
-- Be sure to follow your language/frameworks standard naming conventions (e.g. C# uses PascalCasing for all method and class names).
+- Create insert() method to add to the list.
+- Create includes() to check for if a value is in the list.
+- Create toString() to generate a string representation of the list and its values.
 
 ## Approach & Efficiency
+I created a Node class that stores the value as well as the connection to the next node. Then I created a class for the list itself to track what the head of the list is pointing to.
 
-
-
-## Link to code
-[See the code on GitHub](https://github.com/tskyles-401-advanced-javascript/data-structures-and-algorithims/blob/master/code-challenges/03-arrayBinarySearch/arrayBinarySearch.js)
+Each of the functions within this have an efficiency of O(n).
 
 ## Solution
+
+[See the code on GitHub]()
 
 ![](../../assets/03-arrayBinarySearch.jpg)
