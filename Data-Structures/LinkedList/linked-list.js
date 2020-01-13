@@ -31,7 +31,7 @@ class Linkedlist {
   // newNode.next = current.node
   // head = newNode
   // current = newNode
-  add(value){
+  append(value){
 
   }
 

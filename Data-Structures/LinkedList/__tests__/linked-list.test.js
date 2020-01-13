@@ -67,10 +67,15 @@ describe('testing linked list', () => {
     it('should add new node to the front of the list', () => {
       list.insert(1);
       list.insert(2);
-      list.insert(3);
+      list.append(10);
 
-      list.add(10);
-      expect(list.head.value).toBe();
+      let firstNode = list.head.next.next;
+
+      expect(firstNode).toBe(10);
+    });
+    it('should add new node to empty list', () => {
+      list.append(1);
+      expect(list.head.value).toBe(1);
     });
   });
 
