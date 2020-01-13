@@ -79,6 +79,33 @@ describe('testing linked list', () => {
     });
   });
 
+  describe('insertBefore() method functionality', () => {
+    list.insert(1);
+    list.insert(2);
+    list.insert(3);
+    list.insertBefore(3, 0);
+
+    it('should have the proper next value', () => {
+      let newNext = (list.head.next.val);
+      let expectedNext = 3;
+
+      expect(newNext).toBe(expectedNext);
+    });
+    it('previous node should reference new node', () => {
+      let referencedValue = (list.head.next.val);
+      let expectedValue = (0);
+
+      expect(referencedValue).toBe(expectedValue);
+    });
+
+    it('should increase list length by 1', () => {
+      let newLength = (list.length);
+      let expectedLength = 4;
+
+      expect(newLength).toBe(expectedLength);
+    });
+
+  });
 });
 
 
