@@ -16,7 +16,7 @@ Each of the functions within this have an efficiency of O(n).
 
 ### Links and Resources
 * [submission PR](https://github.com/tskyles-401-advanced-javascript/data-structures-and-algorithims/pull/3)
-* [travis-ci](https://travis-ci.com/tskyles-401-advanced-javascript/data-structures-and-algorithims/builds/144101138)
+* [travis-ci](https://travis-ci.com/tskyles-401-advanced-javascript/data-structures-and-algorithims/builds/144190003)
 
 #### Documentation
 Run live-server on /doc files for full code documentation
