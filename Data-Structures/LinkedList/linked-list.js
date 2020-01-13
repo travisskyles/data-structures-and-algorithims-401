@@ -32,7 +32,17 @@ class Linkedlist {
   // head = newNode
   // current = newNode
   append(value){
+    let newNode = new Node(value);
+    let current = this.head;
 
+    if(this.head === null){
+      this.head = newNode;
+    } else {
+      while(current.next){
+        current = current.next;
+      }
+      current.next = newNode;
+    }
   }
 
   insertBefore(value, newValue){
