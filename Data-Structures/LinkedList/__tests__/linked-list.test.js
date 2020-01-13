@@ -115,7 +115,6 @@ describe('testing linked list', () => {
     list.insert(2);
     list.insert(3);
     list.insertAfter(2, 0);
-    console.log(list.toString());
 
     it('should have the proper next value', () => {
       let newNext = (list.head.value);

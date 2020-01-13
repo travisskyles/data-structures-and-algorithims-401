@@ -26,11 +26,11 @@ class Linkedlist {
     newNode.next = this.head;
     this.head = newNode;
   }
-  // set current equal to head
-  // instantiate new node
-  // newNode.next = current.node
-  // head = newNode
-  // current = newNode
+  /**
+ * appends node to end of the list
+ * @param {*} value
+ * @memberof Linkedlist
+ */
   append(value){
     let newNode = new Node(value);
     let current = this.head;
@@ -44,7 +44,12 @@ class Linkedlist {
       current.next = newNode;
     }
   }
-
+  /**
+ * inserts node before first of given value
+ * @param {*} value
+ * @param {*} newValue
+ * @memberof Linkedlist
+ */
   insertBefore(value, newValue){
     let current = this.head;
 
@@ -58,7 +63,12 @@ class Linkedlist {
       current = current.next;
     }
   }
-
+  /**
+ * inserts after first of given value
+ * @param {*} value
+ * @param {*} newValue
+ * @memberof Linkedlist
+ */
   insertAfter(value, newValue){
     let current = this.head;
     let previous = null;
@@ -85,7 +95,7 @@ class Linkedlist {
     let current = this.head;
     while(current){
       if(current.value === value){
-        return [true, current.value];
+        return true;
       }
       current = current.next;
     }
