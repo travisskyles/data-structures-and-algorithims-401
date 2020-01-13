@@ -95,7 +95,6 @@ describe('testing linked list', () => {
 
     it('should have the proper next value', () => {
       let newNext = (list.head.value);
-      console.log(newNext);
       let expectedNext = 3;
 
       expect(newNext).toBe(expectedNext);
@@ -116,25 +115,19 @@ describe('testing linked list', () => {
     list.insert(2);
     list.insert(3);
     list.insertAfter(2, 0);
+    console.log(list.toString());
 
     it('should have the proper next value', () => {
-      let newNext = (list.head.next.val);
+      let newNext = (list.head.value);
       let expectedNext = 3;
 
       expect(newNext).toBe(expectedNext);
     });
     it('previous node should reference new node', () => {
-      let referencedValue = (list.head.next.val);
-      let expectedValue = (0);
+      let referencedValue = (list.head.next.next.value);
+      let expectedValue = (2);
 
       expect(referencedValue).toBe(expectedValue);
-    });
-
-    it('should increase list length by 1', () => {
-      let newLength = (list.length);
-      let expectedLength = 4;
-
-      expect(newLength).toBe(expectedLength);
     });
   });
 });
