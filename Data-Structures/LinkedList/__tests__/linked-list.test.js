@@ -76,7 +76,7 @@ describe('testing linked list', () => {
       list.append(10);
 
       let firstNode = list.head.next.next;
-      
+
       expect(firstNode.value).toBe(10);
     });
     it('should add new node to empty list', () => {
@@ -94,24 +94,19 @@ describe('testing linked list', () => {
     list.insertBefore(3, 0);
 
     it('should have the proper next value', () => {
-      let newNext = (list.head.next.val);
+      let newNext = (list.head.value);
+      console.log(newNext);
       let expectedNext = 3;
 
       expect(newNext).toBe(expectedNext);
     });
     it('previous node should reference new node', () => {
-      let referencedValue = (list.head.next.val);
+      let referencedValue = (list.head.next.value);
       let expectedValue = (0);
 
       expect(referencedValue).toBe(expectedValue);
     });
 
-    // it('should increase list length by 1', () => {
-    //   let newLength = (list.length);
-    //   let expectedLength = 4;
-
-    //   expect(newLength).toBe(expectedLength);
-    // });
   });
 
   describe('insertAfter() method functionality', () => {

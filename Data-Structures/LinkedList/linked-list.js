@@ -46,7 +46,17 @@ class Linkedlist {
   }
 
   insertBefore(value, newValue){
+    let current = this.head;
 
+    while(current.next !== null){
+      if(current.value === value){
+        let newNode = new Node(newValue);
+
+        newNode.next = current.next;
+        current.next = newNode;
+      }
+      current = current.next;
+    }
   }
 
   insertAfter(value, newValue){
@@ -60,12 +70,12 @@ class Linkedlist {
    * @memberof Linkedlist
    */
   includes(value){
-    let currentNode = this.head;
-    while(currentNode){
-      if(currentNode.value === value){
+    let current = this.head;
+    while(current){
+      if(current.value === value){
         return true;
       }
-      currentNode = currentNode.next;
+      current = current.next;
     }
     return false;
   }
