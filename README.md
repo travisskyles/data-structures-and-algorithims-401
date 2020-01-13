@@ -11,4 +11,6 @@
 
 ## Data Structures
 
+[Linked Lists](https://github.com/tskyles-401-advanced-javascript/data-structures-and-algorithims/tree/master/Data-Structures)
+
 
