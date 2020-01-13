@@ -24,8 +24,6 @@ describe('testing linked list', () => {
     list.insert(2);
     list.insert(3);
 
-    let testList = list.includes(1);
-
     expect(list.head.value).toEqual(3);
   });
 
@@ -63,6 +61,17 @@ describe('testing linked list', () => {
 
     expect(list.head.value).toBe(3);
     expect(list.toString()).toBe('head -> {3} -> {2} -> {1} -> NULL');
+  });
+
+  describe('append() method functionality', () => {
+    it('should add new node to the front of the list', () => {
+      list.insert(1);
+      list.insert(2);
+      list.insert(3);
+
+      list.add(10);
+      expect(list.head.value).toBe();
+    });
   });
 
 });

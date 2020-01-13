@@ -26,6 +26,22 @@ class Linkedlist {
     newNode.next = this.head;
     this.head = newNode;
   }
+  // set current equal to head
+  // instantiate new node
+  // newNode.next = current.node
+  // head = newNode
+  // current = newNode
+  add(value){
+
+  }
+
+  insertBefore(value, newValue){
+
+  }
+
+  insertAfter(value, newValue){
+
+  }
   
   /**
    *
