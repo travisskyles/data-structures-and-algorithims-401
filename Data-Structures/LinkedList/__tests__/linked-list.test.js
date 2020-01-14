@@ -24,8 +24,6 @@ describe('testing linked list', () => {
     list.insert(2);
     list.insert(3);
 
-    let testList = list.includes(1);
-
     expect(list.head.value).toEqual(3);
   });
 
@@ -65,6 +63,72 @@ describe('testing linked list', () => {
     expect(list.toString()).toBe('head -> {3} -> {2} -> {1} -> NULL');
   });
 
+  describe('append() method functionality', () => {
+    let list;
+
+    beforeEach( () => {
+      list = new Linkedlist;
+    });
+
+    it('should add new node to the end of the list', () => {
+      list.insert(1);
+      list.insert(2);
+      list.append(10);
+
+      let firstNode = list.head.next.next;
+
+      expect(firstNode.value).toBe(10);
+    });
+    it('should add new node to empty list', () => {
+      list.append(1);
+      expect(list.head.value).toBe(1);
+    });
+  });
+
+  describe('insertBefore() method functionality', () => {
+    let list = new Linkedlist();
+
+    list.insert(1);
+    list.insert(2);
+    list.insert(3);
+    list.insertBefore(3, 0);
+
+    it('should have the proper next value', () => {
+      let newNext = (list.head.value);
+      let expectedNext = 3;
+
+      expect(newNext).toBe(expectedNext);
+    });
+    it('previous node should reference new node', () => {
+      let referencedValue = (list.head.next.value);
+      let expectedValue = (0);
+
+      expect(referencedValue).toBe(expectedValue);
+    });
+
+  });
+
+  describe('insertAfter() method functionality', () => {
+    let list = new Linkedlist();
+
+    list.insert(1);
+    list.insert(2);
+    list.insert(3);
+    list.insertAfter(2, 0);
+
+    it('should have the proper next value', () => {
+      let newNext = (list.head.value);
+      let expectedNext = 3;
+
+      expect(newNext).toBe(expectedNext);
+    });
+    it('previous node should reference new node', () => {
+      let referencedValue = (list.head.next.next.value);
+      let expectedValue = (2);
+
+      expect(referencedValue).toBe(expectedValue);
+    });
+  });
 });
 
 
