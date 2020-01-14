@@ -70,7 +70,7 @@ describe('testing linked list', () => {
       list = new Linkedlist;
     });
 
-    it('should add new node to the front of the list', () => {
+    it('should add new node to the end of the list', () => {
       list.insert(1);
       list.insert(2);
       list.append(10);
@@ -128,6 +128,8 @@ describe('testing linked list', () => {
 
       expect(referencedValue).toBe(expectedValue);
     });
+
+    it('should return');
   });
 });
 
