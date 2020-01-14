@@ -108,18 +108,43 @@ class Linkedlist {
    * @memberof Linkedlist
    */
   toString(){
-    let currentNode = this.head;
+    let current = this.head;
     let string = 'head';
 
-    while(currentNode){
-      string = `${string} -> {${currentNode.value}}`;
-      currentNode = currentNode.next;
+    while(current){
+      string = `${string} -> {${current.value}}`;
+      current = current.next;
     }
     return `${string} -> NULL`;
   }
+  kthFromEnd(k){
+    let current = this.head;
+    let length = 0;
 
+    while (current !== null){
+      current = current.next;
+      length++;
+    }
+    if(k > length || k <= 0){
+      return undefined;
+    }
+    current = this.head;
+    for(let i = 0; i < length - k; i++){
+      current = current.next;
+    }
+    return current.value;
+  }
 
 }
+
+let list = new Linkedlist();
+
+list.insert(1);
+list.insert(2);
+list.insert(3);
+list.insert(4);
+
+console.log(list.kthFromEnd(0));
 
 /**
  * export linkedlist class
