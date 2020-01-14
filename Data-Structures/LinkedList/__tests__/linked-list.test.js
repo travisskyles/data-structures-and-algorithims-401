@@ -129,6 +129,35 @@ describe('testing linked list', () => {
       expect(referencedValue).toBe(expectedValue);
     });
   });
+
+  describe('kthFromEnd() method functionality', () => {
+    let list = new Linkedlist();
+
+    list.insert(1);
+    list.insert(2);
+    list.insert(3);
+    list.insert(4);
+
+    it('should return null if k is greater than the length of the list', () => {
+
+    });
+
+    it('should return a value if k is at the end of the list', () => {
+
+    });
+
+    it('should return undefined if k is a negative integer', () => {
+
+    });
+
+    it('should return a value if list.length = 1', () => {
+
+    });
+
+    it('should return a value when k is in the middle of the list', () => {
+
+    });
+  });
 });
 
 
