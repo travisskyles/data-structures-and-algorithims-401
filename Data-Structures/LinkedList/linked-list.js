@@ -136,10 +136,24 @@ class Linkedlist {
     return current.value;
   }
   findMiddle(){
+    let current = this.head;
+    let length = 0;
 
+    while (current !== null){
+      current = current.next;
+      length++;
+    }
+    if(length === 0){
+      return undefined;
+    }
+    current = this.head;
+    length = Math.ceil(length/2);
+    for(let i = 0; i < (length-1); i++){
+      current = current.next;
+    }
+    return current;
   }
 }
-
 
 /**
  * export linkedlist class
