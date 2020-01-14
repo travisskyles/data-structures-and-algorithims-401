@@ -15,4 +15,4 @@ Then the counter iterated up a number and the process repeats for the length of 
 
 ## Solution
 
-![](../../assets/01-arrayReverse.jpg)
+![](../assets/01-arrayReverse.jpg)

@@ -25,6 +25,7 @@ class Linkedlist {
     let newNode = new Node(value);
     newNode.next = this.head;
     this.head = newNode;
+    this.length++;
   }
   /**
  * appends node to end of the list
@@ -108,17 +109,61 @@ class Linkedlist {
    * @memberof Linkedlist
    */
   toString(){
-    let currentNode = this.head;
+    let current = this.head;
     let string = 'head';
 
-    while(currentNode){
-      string = `${string} -> {${currentNode.value}}`;
-      currentNode = currentNode.next;
+    while(current){
+      string = `${string} -> {${current.value}}`;
+      current = current.next;
     }
     return `${string} -> NULL`;
   }
+  /**
+ * finds value at the kth position from the end
+ * @param {*} k
+ * @returns the value of node at k from end
+ * @memberof Linkedlist
+ */
+  kthFromEnd(k){
+    let current = this.head;
+    let length = 0;
 
+    while (current !== null){
+      current = current.next;
+      length++;
+    }
+    if(k > length || k < 0){
+      return undefined;
+    }
+    current = this.head;
+    for(let i = 0; i < (length-k-1); i++){
+      current = current.next;
+    }
+    return current.value;
+  }
+  /**
+ * finds middle node in list
+ * @returns node at middle position in list
+ * @memberof Linkedlist
+ */
+  findMiddle(){
+    let current = this.head;
+    let length = 0;
 
+    while (current !== null){
+      current = current.next;
+      length++;
+    }
+    if(length === 0){
+      return undefined;
+    }
+    current = this.head;
+    length = Math.ceil(length/2);
+    for(let i = 0; i < (length-1); i++){
+      current = current.next;
+    }
+    return current;
+  }
 }
 
 /**
