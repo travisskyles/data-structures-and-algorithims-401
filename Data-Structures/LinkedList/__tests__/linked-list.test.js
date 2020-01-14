@@ -156,6 +156,12 @@ describe('testing linked list', () => {
       expect(kValue).toBeUndefined();
     });
 
+    it('should return a value when k is in the middle of the list', () => {
+      let kValue = list.kthFromEnd(2);
+      
+      expect(kValue).toBe(3);
+    });
+
     it('should return a value from a list with only 1 node', () => {
       list = new Linkedlist();
 
@@ -163,12 +169,6 @@ describe('testing linked list', () => {
       let kValue = list.kthFromEnd(0);
 
       expect(kValue).toBe(1);
-    });
-
-    it('should return a value when k is in the middle of the list', () => {
-      let kValue = list.kthFromEnd(2);
-
-      expect(kValue).toBe(3);
     });
   });
 });
