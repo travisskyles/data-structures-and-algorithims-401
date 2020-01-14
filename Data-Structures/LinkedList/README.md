@@ -24,10 +24,14 @@ insertAfterValue()-O(n)
 kthFromEnd-O(n)
 
 ### Links and Resources
-* [submission PR](https://github.com/tskyles-401-advanced-javascript/data-structures-and-algorithims/pull/4)
-* [travis-ci](https://travis-ci.com/tskyles-401-advanced-javascript/data-structures-and-algorithims/builds/144244301)
+* [submission PR](https://github.com/tskyles-401-advanced-javascript/data-structures-and-algorithims/pull/5)
+* [travis-ci](https://travis-ci.com/tskyles-401-advanced-javascript/data-structures-and-algorithims)
 
 #### Documentation
 Run live-server on /doc files for full code documentation
 * [Link to documentation](https://github.com/tskyles-401-advanced-javascript/data-structures-and-algorithims/tree/master/Data-Structures/LinkedList/docs)
+
+### Solutions
+
+[kthFromEnd](./assets/ll-kthFromEnd.jpg)
 
