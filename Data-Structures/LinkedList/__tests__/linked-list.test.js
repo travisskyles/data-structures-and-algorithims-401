@@ -139,23 +139,36 @@ describe('testing linked list', () => {
     list.insert(4);
 
     it('should return null if k is greater than the length of the list', () => {
+      let kValue = list.kthFromEnd(6);
 
+      expect(kValue).toBeNull();
     });
 
     it('should return a value if k is at the end of the list', () => {
+      let kValue = list.kthFromEnd(3);
 
+      expect(kValue).toBe(4);
     });
 
     it('should return undefined if k is a negative integer', () => {
+      let kValue = list.kthFromEnd(-3);
 
+      expect(kValue).toBeUndefined();
     });
 
-    it('should return a value if list.length = 1', () => {
+    it('should return a value from a list with only 1 node', () => {
+      list = new Linkedlist();
 
+      list.insert(1);
+      let kValue = list.kthFromEnd(0);
+
+      expect(kValue).toBe(1);
     });
 
     it('should return a value when k is in the middle of the list', () => {
+      let kValue = list.kthFromEnd(2);
 
+      expect(kValue).toBe(3);
     });
   });
 });
