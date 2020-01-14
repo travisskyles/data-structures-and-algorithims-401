@@ -118,6 +118,12 @@ class Linkedlist {
     }
     return `${string} -> NULL`;
   }
+  /**
+ * finds value at the kth position from the end
+ * @param {*} k
+ * @returns the value of node at k from end
+ * @memberof Linkedlist
+ */
   kthFromEnd(k){
     let current = this.head;
     let length = 0;
@@ -135,6 +141,11 @@ class Linkedlist {
     }
     return current.value;
   }
+  /**
+ * finds middle node in list
+ * @returns node at middle position in list
+ * @memberof Linkedlist
+ */
   findMiddle(){
     let current = this.head;
     let length = 0;
