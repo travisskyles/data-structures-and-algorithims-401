@@ -141,7 +141,7 @@ describe('testing linked list', () => {
     it('should return null if k is greater than the length of the list', () => {
       let kValue = list.kthFromEnd(6);
 
-      expect(kValue).toBeNull();
+      expect(kValue).toBeUndefined();
     });
 
     it('should return a value if k is at the end of the list', () => {

@@ -125,11 +125,11 @@ class Linkedlist {
       current = current.next;
       length++;
     }
-    if(k > length || k <= 0){
+    if(k > length || k < 0){
       return undefined;
     }
     current = this.head;
-    for(let i = 0; i < length - k; i++){
+    for(let i = 0; i < (length-k-1); i++){
       current = current.next;
     }
     return current.value;
