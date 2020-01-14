@@ -25,6 +25,7 @@ class Linkedlist {
     let newNode = new Node(value);
     newNode.next = this.head;
     this.head = newNode;
+    this.length++;
   }
   /**
  * appends node to end of the list
@@ -134,7 +135,9 @@ class Linkedlist {
     }
     return current.value;
   }
+  findMiddle(){
 
+  }
 }
 
 

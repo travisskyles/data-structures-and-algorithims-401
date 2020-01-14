@@ -12,6 +12,7 @@ Create a singly liked list module.
 - Create insertBeforeValue(value, newValue) to add a new node with a given value immediately before the first value node.
 - Create insertAfter(value, newValue) to add a new node with a given value immediately after the first value node.
 - Create kthFromEnd(k) which takes a number,k, and returns the value of the node that is kth from the end of the list
+- Create findMiddle() which returns the node in the middle of the list.
 
 ## Approach & Efficiency
 I created a Node class that stores the value as well as the connection to the next node. Then I created a class for the list itself to track what the head of the list is pointing to.

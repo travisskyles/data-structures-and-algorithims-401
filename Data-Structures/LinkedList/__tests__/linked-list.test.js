@@ -158,7 +158,7 @@ describe('testing linked list', () => {
 
     it('should return a value when k is in the middle of the list', () => {
       let kValue = list.kthFromEnd(2);
-      
+
       expect(kValue).toBe(3);
     });
 
@@ -170,6 +170,42 @@ describe('testing linked list', () => {
 
       expect(kValue).toBe(1);
     });
+  });
+
+  describe('findMiddle() method functionality', () => {
+    let list;
+
+    beforeEach( () => {
+      list = new Linkedlist;
+    });
+    it('should return the middle node in the list', () => {
+      list.insert(1);
+      list.insert(2);
+      list.insert(3);
+      let middleNode = list.findMiddle();
+
+      expect(middleNode.value).toBe(2);
+    });
+    it('should round up if an even number of nodes', () => {
+      list.insert(1);
+      list.insert(2);
+      list.insert(3);
+      list.insert(4);
+      let middleNode = list.findMiddle();
+      expect(middleNode.value).toBe(3);
+    });
+    it('should return the first node if only one in list', () => {
+      list.insert(1);
+      let middleNode = list.findMiddle();
+
+      expect(middleNode.value).toBe(1);
+    });
+    it('should return undefined if there are no nodes', () => {
+      let middleNode = list.findMiddle();
+      
+      expect(middleNode).toBeUndefined();
+    });
+
   });
 });
 
