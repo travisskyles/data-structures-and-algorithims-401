@@ -15,4 +15,4 @@ For this challenge I knew that it would need a left and right value in order to 
 
 ## Solution
 
-![](../../assets/03-arrayBinarySearch.jpg)
+![](../assets/03-arrayBinarySearch.jpg)

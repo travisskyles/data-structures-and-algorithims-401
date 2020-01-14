@@ -12,4 +12,4 @@ For this challenge I decided to work the problem in two parts. Initially I creat
 
 ## Solution
 
-![](../../assets/02-arrayShift.jpg)
+![](../assets/02-arrayShift.jpg)
