@@ -128,8 +128,6 @@ describe('testing linked list', () => {
 
       expect(referencedValue).toBe(expectedValue);
     });
-
-    it('should return');
   });
 });
 
