@@ -222,9 +222,9 @@ describe('testing linked list', () => {
       list2.insert(2);
       list2.insert(3);
 
-      let merged = mergeLists(list1, list2);
-
-      expect(merged.toString()).toEqual('head -> {3} -> {3} -> {2} -> {2} -> {1} -> {1} -> NULL');
+      let merged = list.mergeLists(list1, list2);
+      console.log(merged.toString());
+      expect(merged.toString()).toBe('head -> {1} -> {1} -> {2} -> {2} -> {3} -> {3} -> NULL');
     });
 
     it('should return a reference to the head of the zipped list', () => {
@@ -239,15 +239,15 @@ describe('testing linked list', () => {
       list2.insert(2);
       list2.insert(3);
 
-      let merged = mergeLists(list1, list2);
-      expect(merged.value).toBe(1);
+      let merged = list.mergeLists(list1, list2);
+      expect(merged.head.value).toBe(1);
     });
 
     it('should return undefined if both lists are empty', () => {
       let list1 = new Linkedlist();
       let list2 = new Linkedlist();
 
-      let merged = mergeLists(list1, list2);
+      let merged = list.mergeLists(list1, list2);
 
       expect(merged).toBeUndefined;
     });
@@ -260,7 +260,7 @@ describe('testing linked list', () => {
       list1.insert(2);
       list1.insert(3);
 
-      let merged = mergeLists(list1, list2);
+      let merged = list.mergeLists(list1, list2);
 
       expect(merged).toEqual(list1);
       expect(merged).not.toEqual(list2);
@@ -276,9 +276,9 @@ describe('testing linked list', () => {
 
       list2.insert(1);
 
-      let merged = mergeLists(list1, list2);
+      let merged = list.mergeLists(list1, list2);
 
-      expect(merged.next.next.next.value).toBe(3);
+      expect(merged.head.next.next.next.value).toBe(3);
     });
   });
 });
