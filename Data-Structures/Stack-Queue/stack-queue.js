@@ -51,6 +51,18 @@ class Stack {
   peek(){
     return this.top.value;
   }
+  /**
+   * Return a boolean whether stack is empty
+   * @method isEmpty
+   */
+  isEmpty(){
+    if(this.top === null){
+      return true;
+    }
+    else(){
+      return false;
+    }
+  }
   
 }
 // create queue that has front property
