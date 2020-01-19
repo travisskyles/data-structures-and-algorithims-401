@@ -120,7 +120,12 @@ class Queue {
    * @memberof Queue
    */
   peek(){
-
+    if(this.front === null){
+      return null;
+    }
+    else{
+      return this.top.value;
+    }
   }
   /**
    * Returns a boolean whether or not the queue is empty
@@ -128,7 +133,12 @@ class Queue {
    * @memberof Queue
    */
   isEmpty(){
-
+    if(this.front === null){
+      return true;
+    }
+    else{
+      return false;
+    }
   }
 
 }
