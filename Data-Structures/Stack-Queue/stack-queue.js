@@ -91,12 +91,12 @@ class Queue {
    */
   enqueue(value){
     let newNode = new Node(value);
-    (!this.front){
+    if(this.front === null){
       this.front = newNode;
       this.back = newNode;
     }
     this.back.next = newNode;
-    this.back = newnode;
+    this.back = newNode;
   }
   /**
    * Removes a node from the fron of the queue and returns the value
@@ -124,7 +124,7 @@ class Queue {
       return null;
     }
     else{
-      return this.top.value;
+      return this.front.value;
     }
   }
   /**

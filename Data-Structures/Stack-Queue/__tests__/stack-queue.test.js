@@ -31,7 +31,7 @@ describe('Stack functionality', () => {
   });
 
   it('returns undefined if trying to pop from an empty stack', () => {
-    expect(stack.pop()).toBeUndefined();
+    expect(stack.pop()).toBeNull();
   });
 
   it('returns the value of the top node', () => {
@@ -45,7 +45,6 @@ describe('Stack functionality', () => {
   });
 
   it('returns null if peeking into empty stack', () => {
-    console.log(stack.peek());
     expect(stack.peek()).toBeNull();
   });
 
@@ -90,8 +89,8 @@ describe('Queue functionality', () => {
     expect(queue.back.value).toBe(2);
   });
 
-  it('returns undefined if trying to remove a node from an empty queues', () => {
-    expect(queue.dequeue()).toBeUndefined();
+  it('returns null if trying to remove a node from an empty queues', () => {
+    expect(queue.dequeue()).toBeNull();
   });
 
   it('returns the value of the front node', () => {
