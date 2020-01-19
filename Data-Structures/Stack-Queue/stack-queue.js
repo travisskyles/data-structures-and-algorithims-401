@@ -9,13 +9,19 @@ class Node {
 }
 // create stack class that has top property
 class Stack {
-  constructor(top){
+  constructor(){
     this.top = null;
+  }
+
+  push(value){
+    let newNode = new Node(value);
+    newNode.next = this.top;
+    this.top = newNode;
   }
 }
 // create queue that has front property
 class Queue {
-  constructor(front){
+  constructor(){
     this.front = null;
   }
 }
