@@ -59,7 +59,7 @@ class Stack {
     if(this.top === null){
       return true;
     }
-    else(){
+    else{
       return false;
     }
   }
@@ -71,3 +71,5 @@ class Queue {
     this.front = null;
   }
 }
+
+module.exports = {Stack, Queue};
