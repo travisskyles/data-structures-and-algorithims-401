@@ -2,7 +2,7 @@
 
 /**
  * Node Class
- * @class
+ * @class Node
  */
 class Node {
   constructor(value, next){
@@ -10,10 +10,9 @@ class Node {
     this.next = next;
   }
 }
-// create stack class that has top property
 /**
  * Stack Class
- * @class
+ * @class Stack
  */
 class Stack {
   constructor(){
@@ -45,6 +44,14 @@ class Stack {
       tempNode.next = null;
     }
   }
+  /**
+   * Return value at the top of the stack
+   * @method peek
+   */
+  peek(){
+    return this.top.value;
+  }
+  
 }
 // create queue that has front property
 class Queue {
