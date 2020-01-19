@@ -38,7 +38,7 @@ class Stack {
     let tempNode;
 
     if(this.top === null){
-      return undefined;
+      return null;
     }
     else{
       tempNode = this.top;
@@ -52,7 +52,12 @@ class Stack {
    * @memberof Stack
    */
   peek(){
-    return this.top.value;
+    if(this.top === null){
+      return null;
+    }
+    else{
+      return this.top.value;
+    }
   }
   /**
    * Return a boolean whether stack is empty
@@ -76,6 +81,7 @@ class Stack {
 class Queue {
   constructor(){
     this.front = null;
+    this.back = null;
   }
   /**
    *  Adds node to the back of the queue
@@ -84,7 +90,13 @@ class Queue {
    * @memberof Queue
    */
   enqueue(value){
-
+    let newNode = new Node(value);
+    (!this.front){
+      this.front = newNode;
+      this.back = newNode;
+    }
+    this.back.next = newNode;
+    this.back = newnode;
   }
   /**
    * Removes a node from the fron of the queue and returns the value
@@ -92,7 +104,15 @@ class Queue {
    * @memberof Queue
    */
   dequeue(){
+    let tempNode;
 
+    if(this.front === null){
+      return null;
+    }
+    tempNode = this.front;
+    this.front = this.front.next;
+    tempNode.next = null;
+    
   }
   /**
    * Returns the value fo the node at the front of the queue
