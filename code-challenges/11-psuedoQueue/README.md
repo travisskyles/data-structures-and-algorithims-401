@@ -22,6 +22,10 @@ Create a new class called PseudoQueue that utilizes 2 stack objects and creates 
 
 [Travis-ci](https://travis-ci.com/tskyles-401-advanced-javascript/data-structures-and-algorithims)
 
+#### Documentation
+Run live-server on /doc files for full code documentation
+* [Link to documentation](https://github.com/tskyles-401-advanced-javascript/data-structures-and-algorithims/tree/psuedoQueue/code-challenges/11-psuedoQueue/docs)
+
 ## Solution
 
 ![](../assets/11-pseudoCode.jpg)
