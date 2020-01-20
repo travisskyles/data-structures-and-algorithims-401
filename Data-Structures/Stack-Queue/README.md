@@ -11,6 +11,11 @@
 ## Approach & Efficiency
 I created Node, Stack, and Queue classes that each have corresponding methods. The methods are made to be as efficient as possible.
 
+Stack: 
+  * O(1) - push, pop, peek, isEmpty
+Queue: 
+  * O(1) - enqueue, dequeue, peek, isEmpty
+
 ## API
 
 ### Stack
@@ -31,7 +36,7 @@ I created Node, Stack, and Queue classes that each have corresponding methods. T
 
 #### Documentation
 Run live-server on /doc files for full code documentation
-* [Link to documentation](https://github.com/tskyles-401-advanced-javascript/data-structures-and-algorithims/tree/master/Data-Structures/LinkedList/docs)
+* [Link to documentation](https://github.com/tskyles-401-advanced-javascript/data-structures-and-algorithims/tree/stack-queue/Data-Structures/Stack-Queue/docs)
 
 ### Solutions
 
