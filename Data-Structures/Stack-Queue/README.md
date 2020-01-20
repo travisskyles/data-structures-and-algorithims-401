@@ -26,7 +26,7 @@ I created Node, Stack, and Queue classes that each have corresponding methods. T
 * isEmpty() - returns boolean based of whether queue is empty
 
 ### Links and Resources
-* [submission PR]()
+* [submission PR](https://github.com/tskyles-401-advanced-javascript/data-structures-and-algorithims/pull/7)
 * [travis-ci](https://travis-ci.com/tskyles-401-advanced-javascript/data-structures-and-algorithims)
 
 #### Documentation
@@ -34,5 +34,7 @@ Run live-server on /doc files for full code documentation
 * [Link to documentation](https://github.com/tskyles-401-advanced-javascript/data-structures-and-algorithims/tree/master/Data-Structures/LinkedList/docs)
 
 ### Solutions
+
+[push/enqueue, pop/dequeue, peek, isEmpty](./assets/stack-queue-init.jpg)
 
 
