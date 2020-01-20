@@ -10,11 +10,17 @@ Create a new class called PseudoQueue that utilizes 2 stack objects and creates 
 * enqueue - O(1)
 * dequeue - O(n)
 
+## API
+* enqueue(value) - adds value to the queue
+* dequeue - removes value from the queue
 
-## Link to code
+
+## Links and Resources
 [link to Stack module](https://github.com/tskyles-401-advanced-javascript/data-structures-and-algorithims/tree/stack-queue/Data-Structures/Stack-Queue)
 
-[See the code on GitHub](https://github.com/tskyles-401-advanced-javascript/data-structures-and-algorithims/pull/8)
+[Submission PR](https://github.com/tskyles-401-advanced-javascript/data-structures-and-algorithims/pull/8)
+
+[Travis-ci](https://travis-ci.com/tskyles-401-advanced-javascript/data-structures-and-algorithims)
 
 ## Solution
 
