@@ -164,7 +164,52 @@ class Linkedlist {
     }
     return current;
   }
+  /**
+   * merges two linked lists by alternating nodes from each
+   * @param {*} list1 
+   * @param {*} list2 
+   */
+  mergeLists(list1, list2){
+    const list = new Linkedlist();
+    let currentA = list1.head;
+    let currentB = list2.head;
+    if(currentA === null && currentB === null){
+      return undefined;
+    }
+    if(currentA === null){
+      return list2;
+    }
+    if(currentB === null){
+      return list1;
+    }
+  
+    while(currentA !== null && currentB !== null){
+      list.insert(currentA.value);
+      list.insert(currentB.value);
+      currentA = currentA.next;
+      currentB = currentB.next;
+    }
+  
+    if(currentA === null && currentB === null){
+      return list;
+    }
+  
+    if(currentA === null){
+      while(currentB !== null){
+        list.insert(currentB);
+        currentB = currentB.next;
+      }
+    }
+    if(currentB === null){
+      while(currentA !== null){
+        list.insert(currentA);
+        currentA = currentA.next;
+      }
+    }
+    return list;
+  }
 }
+
 
 /**
  * export linkedlist class
