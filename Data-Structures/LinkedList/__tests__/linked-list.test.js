@@ -207,6 +207,80 @@ describe('testing linked list', () => {
     });
 
   });
+
+  describe('mergeList() functionality', () => {
+
+    it('should create an interlaced list', () => {
+      let list1 = new Linkedlist();
+      let list2 = new Linkedlist();
+  
+      list1.insert(1);
+      list1.insert(2);
+      list1.insert(3);
+  
+      list2.insert(1);
+      list2.insert(2);
+      list2.insert(3);
+
+      let merged = list.mergeLists(list1, list2);
+      console.log(merged.toString());
+      expect(merged.toString()).toBe('head -> {1} -> {1} -> {2} -> {2} -> {3} -> {3} -> NULL');
+    });
+
+    it('should return a reference to the head of the zipped list', () => {
+      let list1 = new Linkedlist();
+      let list2 = new Linkedlist();
+  
+      list1.insert(1);
+      list1.insert(2);
+      list1.insert(3);
+  
+      list2.insert(1);
+      list2.insert(2);
+      list2.insert(3);
+
+      let merged = list.mergeLists(list1, list2);
+      expect(merged.head.value).toBe(1);
+    });
+
+    it('should return undefined if both lists are empty', () => {
+      let list1 = new Linkedlist();
+      let list2 = new Linkedlist();
+
+      let merged = list.mergeLists(list1, list2);
+
+      expect(merged).toBeUndefined;
+    });
+
+    it('should return the non empty list if the other is empty', () => {
+      let list1 = new Linkedlist();
+      let list2 = new Linkedlist();
+
+      list1.insert(1);
+      list1.insert(2);
+      list1.insert(3);
+
+      let merged = list.mergeLists(list1, list2);
+
+      expect(merged).toEqual(list1);
+      expect(merged).not.toEqual(list2);
+    });
+
+    it('should add excess from uneven lists to the end of the new list', () => {
+      let list1 = new Linkedlist();
+      let list2 = new Linkedlist();
+
+      list1.insert(1);
+      list1.insert(2);
+      list1.insert(3);
+
+      list2.insert(1);
+
+      let merged = list.mergeLists(list1, list2);
+
+      expect(merged.head.next.next.next.value).toBe(3);
+    });
+  });
 });
 
 
