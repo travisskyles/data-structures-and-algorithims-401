@@ -2,17 +2,32 @@
 
 const {Stack} = require('../../Data-Structures/Stack-Queue/stack-queue');
 
-
+/**
+ *
+ *
+ * @class AnimalShelter
+ */
 class AnimalShelter{
   constructor(){
     this.in = new Stack;
     this.out = new Stack;
   }
-
+  /**
+ *
+ *
+ * @param {*} animal
+ * @memberof AnimalShelter
+ */
   enqueue(animal){
     this.in.push(animal);
   }
-
+  /**
+ *
+ *
+ * @param {*} pref
+ * @returns first value of type pref
+ * @memberof AnimalShelter
+ */
   dequeue(pref){
     if(pref !== 'dog' || pref !== 'cat'){
       return null;
@@ -36,5 +51,7 @@ class AnimalShelter{
     }
   }
 }
-
+/** 
+ * @module AnimalShelter
+*/
 module.exports = AnimalShelter;
