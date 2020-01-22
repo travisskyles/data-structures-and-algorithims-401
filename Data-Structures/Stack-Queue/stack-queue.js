@@ -44,6 +44,7 @@ class Stack {
       tempNode = this.top;
       this.top = this.top.next;
       tempNode.next = null;
+      return tempNode.value;
     }
   }
   /**
