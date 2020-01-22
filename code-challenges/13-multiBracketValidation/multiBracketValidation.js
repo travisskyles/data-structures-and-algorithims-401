@@ -1,9 +1,9 @@
 'use strict';
 
-const Stack = require('../../Data-Structures/Stack-Queue');
+const {Stack} = require('../../Data-Structures/Stack-Queue/stack-queue');
 
 function bracketValidation(string){
-  let stack = new Stack;
+  let stack = new Stack();
 
   let openBrackets = {
     '(': ')',
@@ -20,12 +20,18 @@ function bracketValidation(string){
   for(let i = 0; i < string.length; i++){
     let char = string.charAt(i);
     if(openBrackets[char]){
-      stack.push(char);
+      stack.push(openBrackets[char]);
     }
-    if(closingBrackets[char]){
-      stack.pop().value === char? true: false;
+    else if(closingBrackets[char]){
+      if(stack.isEmpty()){
+        return false;
+      }
+      else if(closingBrackets[char] === closingBrackets[stack.top.value]){
+        stack.pop();
+      }
     }
   }
+  (stack.isEmpty())? true: false;
 }
 
 
