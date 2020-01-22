@@ -16,9 +16,13 @@ function bracketValidation(string){
     '}': '}',
     ']': ']',
   };
+  if(typeof string !== 'string'){
+    return undefined;
+  }
   
   for(let i = 0; i < string.length; i++){
     let char = string.charAt(i);
+
     if(openBrackets[char]){
       stack.push(openBrackets[char]);
     }
@@ -31,9 +35,11 @@ function bracketValidation(string){
       }
     }
   }
-  (stack.isEmpty())? true: false;
+  if(stack.isEmpty()){
+    return true;
+  }else{
+    return false;
+  }
 }
-
-
 
 module.exports = bracketValidation;
