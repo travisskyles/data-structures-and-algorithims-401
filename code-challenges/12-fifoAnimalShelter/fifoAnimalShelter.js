@@ -14,6 +14,9 @@ class AnimalShelter{
   }
 
   dequeue(pref){
+    if(pref !== 'dog' || pref !== 'cat'){
+      return null;
+    }
     if(this.out.isEmpty()){
       while(!this.in.isEmpty()){
         this.out.push(this.in.pop());
@@ -24,7 +27,8 @@ class AnimalShelter{
       while(this.out.top.value !== pref){
         this.in.push(this.out.pop());
       }
-      chosenAnimal = this.out.pop();
+      chosenAnimal = this.out.top.value;
+      this.out.pop();
       while(!this.out.isEmpty()){
         this.in.push(this.out.pop());
       }
@@ -32,6 +36,5 @@ class AnimalShelter{
     }
   }
 }
-
 
 module.exports = AnimalShelter;
