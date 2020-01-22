@@ -1,37 +1,31 @@
 'use strict';
 
-const {Stack} = require('../../Data-Structures/Stack-Queue/stack-queue');
+const Shelter = require('../fifoAnimalShelter');
 
+describe('AnimalShelter initialization', () => {
+  it('initializes with an empty in and out stack', () => {
+    let shelter = new Shelter;
 
-class AnimalShelter{
-  constructor(){
-    this.in = new Stack;
-    this.out = new Stack;
-  }
+    expect(shelter.in.isEmpty()).toBeTruthy();
+    expect(shelter.out.isEmpty()).toBeTruthy();
+  });
+});
 
-  enqueue(animal){
-    this.in.push(animal);
-  }
+describe('enqueue functionality', () => {
+  let shelter;
 
-  dequeue(pref){
-    if(this.out.isEmpty()){
-      while(!this.in.isEmpty()){
-        this.out.push(this.in.pop());
-      }
-    }
-    if(!this.out.isEmpty()){
-      let chosenAnimal;
-      while(this.out.top.value !== pref){
-        this.in.push(this.out.pop());
-      }
-      chosenAnimal = this.out.pop();
-      while(!this.out.isEmpty()){
-        this.in.push(this.out.pop());
-      }
-      return chosenAnimal;
-    }
-  }
-}
+  beforeEach(() => {
+    shelter = new Shelter;
+  });
 
-
-module.exports = AnimalShelter;
+  it('should push to first stack if empty', () => {
+    shelter.enqueue('cat');
+    expect(shelter.in.top.value).toEqual('cat');
+  });
+  it('should push to stack with multiple values stored', () => {
+    shelter.enqueue('cat');
+    shelter.enqueue('dog');
+    shelter.enqueue('cat');
+    expect(shelter.in.top.value).toBe('cat');
+  });
+});
