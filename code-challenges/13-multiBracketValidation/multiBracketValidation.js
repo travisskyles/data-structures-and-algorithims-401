@@ -2,6 +2,11 @@
 
 const {Stack} = require('../../Data-Structures/Stack-Queue/stack-queue');
 
+/**
+ * checks to see if an input string has matching opening and closing brackets
+ * @param {*} string
+ * @returns true if matching, false if not matching, undefined if input is not a string
+ */
 function bracketValidation(string){
   let stack = new Stack();
 
