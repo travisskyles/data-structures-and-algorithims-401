@@ -16,9 +16,9 @@ Create a function fizzBuzzTree that replaces value divisible by 3 & 5 with fizzb
 ## Links and Resources
 [link to BinaryTree module](https://github.com/tskyles-401-advanced-javascript/data-structures-and-algorithims/tree/master/Data-Structures/BinarySearchTree)
 
-[Submission PR]()
+[Submission PR](https://github.com/tskyles-401-advanced-javascript/data-structures-and-algorithims/pull/13)
 
-[Travis-ci]()
+[Travis-ci](https://travis-ci.com/tskyles-401-advanced-javascript/data-structures-and-algorithims)
 
 #### Documentation
 Run live-server on /doc files for full code documentation
