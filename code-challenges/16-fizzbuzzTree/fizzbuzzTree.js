@@ -19,7 +19,6 @@ function fizzBuzzTree(tree){
   }
 
   const recursive = node => {
-    console.log(node);
     if(node){
       recursive(node.left);
       fizzBuzz(node);
