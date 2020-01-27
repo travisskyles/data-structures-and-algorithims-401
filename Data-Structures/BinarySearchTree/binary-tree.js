@@ -30,9 +30,11 @@ class BinaryTree {
     const results = [];
 
     const recursive = node => {
-      results.push(node.value);
-      if(node.left) recursive(node.left);
-      if(node.right) recursive(node.right);
+      if(node){
+        results.push(node.value);
+        recursive(node.left);
+        recursive(node.right);
+      }
     };
     recursive(this.root);
     return results;
@@ -48,9 +50,11 @@ class BinaryTree {
     const results = [];
 
     const recursive = node => {
-      if(node.left) recursive(node.left);
-      results.push(node.value);
-      if(node.right) recursive(node.right);
+      if(node){
+        recursive(node.left);
+        results.push(node.value);
+        recursive(node.right);
+      }
     };
     recursive(this.root);
     return results;
@@ -65,9 +69,11 @@ class BinaryTree {
     const results = [];
 
     const recursive = node => {
-      if(node.left) recursive(node.left);
-      if(node.right) recursive(node.right);
-      results.push(node.value);
+      if(node){
+        recursive(node.left);
+        recursive(node.right);
+        results.push(node.value);
+      }
     };
     recursive(this.root);
     return results;
@@ -121,9 +127,5 @@ class BinarySearchTree {
 
 }
 
-let testTree = new BinarySearchTree(4);
-testTree.add(3);
-testTree.add(7);
 
-console.log(testTree);
-console.log(testTree.contains(7));
+module.exports = {BinaryTree, BinarySearchTree, Node};
