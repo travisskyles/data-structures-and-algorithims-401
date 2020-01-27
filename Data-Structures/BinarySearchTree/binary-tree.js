@@ -17,8 +17,8 @@ class Node {
  * @class BinaryTree
  */
 class BinaryTree {
-  constructor(){
-    this.root = new Node;
+  constructor(value){
+    this.root = new Node(value);
   }
   /**
  *
@@ -75,31 +75,39 @@ class BinaryTree {
 }
 
 class BinarySearchTree {
-  constructor(tree = new BinaryTree()){
-    this.tree = tree;
+  constructor(value){
+    this.root = new Node(value);
   }
 
   add(value){
     let newNode = new Node(value);
 
-    if(this.tree.root.value === null){
-      this.tree.root.value = value;
-    }
-    if(this.tree.root.value > value && this.tree.left === null){
-      this.left = newNode;
-    } else if (this.tree.value > value){
-      this.add(this.tree.left);
-    } else if (this.tree.root.value < value && this.tree.right === null){
-      this.right = newNode;
-    } else if (this.tree.value < value){
-      this.add(this.tree.right);
-    }
+    const search = node => {
+      if(node.value > value){
+        if(!node.left){
+          node.left = newNode;
+        }
+        else{
+          search(node.left);
+        }
+      }
+      if(node.value < value){
+        if(!node.right){
+          node.right = newNode;
+        }
+        else{
+          search(node.right);
+        }
+      }
+    };
+
+    search(this.root);
   }
 
 }
 
-let testTree = new BinarySearchTree();
-testTree.add(5);
+let testTree = new BinarySearchTree(4);
+testTree.add(3);
 testTree.add(7);
 
 console.log(testTree);
