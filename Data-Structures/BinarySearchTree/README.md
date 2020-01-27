@@ -21,13 +21,13 @@ I created a node class that has a value, and left and right children properties.
 * BinarySearchTree.contains(value) - O(n)
 
 ### Links and Resources
-* [submission PR]()
-* [travis-ci]()
+* [submission PR](https://github.com/tskyles-401-advanced-javascript/data-structures-and-algorithims/pull/12)
+* [travis-ci](https://travis-ci.com/tskyles-401-advanced-javascript/data-structures-and-algorithims)
 
 #### Documentation
 Run live-server on /doc files for full code documentation
 
 ### Solutions
 
-- [BinaryTree]()
-- [BinarySearchTree]()
+- [BinaryTree](./assets/binaryTree.jpg)
+- [BinarySearchTree](./assets/binarySearchTree.jpg)
