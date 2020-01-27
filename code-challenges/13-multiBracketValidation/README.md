@@ -16,14 +16,14 @@ Create a function bracketValidator that ensures that there are matching opening 
 ## Links and Resources
 [link to Stack module](https://github.com/tskyles-401-advanced-javascript/data-structures-and-algorithims/tree/stack-queue/Data-Structures/Stack-Queue)
 
-[Submission PR]()
+[Submission PR](https://github.com/tskyles-401-advanced-javascript/data-structures-and-algorithims/pull/10)
 
-[Travis-ci]()
+[Travis-ci](https://travis-ci.com/tskyles-401-advanced-javascript/data-structures-and-algorithims)
 
 #### Documentation
 Run live-server on /doc files for full code documentation
-* [Link to documentation](https://github.com/tskyles-401-advanced-javascript/data-structures-and-algorithims/tree/psuedoQueue/code-challenges/11-psuedoQueue/docs)
+* [Link to documentation](https://github.com/tskyles-401-advanced-javascript/data-structures-and-algorithims/tree/master/code-challenges/13-multiBracketValidation/docs)
 
 ## Solution
 
-![](../assets/11-pseudoCode.jpg)
+![](../assets/13-bracketValidation.jpg)
