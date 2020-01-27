@@ -1,5 +1,10 @@
 'use strict';
-
+/**
+ *
+ *
+ * @param {*} tree
+ * @returns new tree with replaced values
+ */
 function fizzBuzzTree(tree){
   let newTree = tree;
 
