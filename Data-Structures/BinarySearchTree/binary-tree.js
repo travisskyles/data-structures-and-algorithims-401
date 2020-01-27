@@ -104,6 +104,21 @@ class BinarySearchTree {
     search(this.root);
   }
 
+  contains(value){
+    let current = this.root;
+
+    while(current){
+      if(value === current.value) return true;
+      if(value < current.value){
+        current = current.left;
+      }
+      else{
+        current = current.right;
+      }
+    }
+    return false;
+  }
+
 }
 
 let testTree = new BinarySearchTree(4);
@@ -111,3 +126,4 @@ testTree.add(3);
 testTree.add(7);
 
 console.log(testTree);
+console.log(testTree.contains(7));
