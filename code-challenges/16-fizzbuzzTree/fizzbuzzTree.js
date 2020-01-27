@@ -29,30 +29,4 @@ function fizzBuzzTree(tree){
   return newTree;
 }
 
-// function fizzBuzz(value){
-//   if(value % 3 === 0 && value % 5 === 0){
-//     value = 'FizzBuzz';
-//   }
-//   if(value % 3 === 0){
-//     value = 'Fizz';
-//   }
-//   if(value % 5 === 0){
-//     value = 'Buzz';
-//   }
-//   else{
-//     value = value.toString();
-//   }
-// }
-
-// function traversal(tree, cb){
-//   const recursive = node => {
-//     if(node){
-//       recursive(node.left);
-//       cb(node.value);
-//       recursive(node.right);
-//     }
-//   };
-//   recursive(tree.root);
-// }
-
 module.exports = fizzBuzzTree;
