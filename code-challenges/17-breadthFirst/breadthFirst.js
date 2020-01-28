@@ -6,8 +6,8 @@ function breadthFirst(tree){
   const queue = new Queue();
   const output = [];
   let current = tree.root;
-  if(current === null){
-    return;
+  if(current.value === null){
+    return null;
   }
   queue.enqueue(current);
 
