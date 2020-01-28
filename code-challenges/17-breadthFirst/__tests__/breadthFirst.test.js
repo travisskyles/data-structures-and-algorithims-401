@@ -14,7 +14,6 @@ describe('breadthFirst method', () => {
   BT.root.right.left = new Node(1);
 
   it('should return values after traversing breadth first', () => {
-    console.log(BT);
     expect(breadthFirst(BT)).toEqual([10,4,9,6,2,1]);
   });
   it('should return null if tree is empty', () => {
