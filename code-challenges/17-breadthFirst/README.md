@@ -14,9 +14,9 @@ Write a breadth first traversal method which takes a Binary Tree as its unique i
 
 
 ## Links and Resources
-[link to BinaryTree module](https://github.com/tskyles-401-advanced-javascript/data-structures-and-algorithims/tree/master/Data-Structures/BinarySearchTree)
+[link to Queue module](https://github.com/tskyles-401-advanced-javascript/data-structures-and-algorithims/tree/master/Data-Structures/Stack-Queue)
 
-[Submission PR]()
+[Submission PR](https://github.com/tskyles-401-advanced-javascript/data-structures-and-algorithims/pull/14)
 
 [Travis-ci](https://travis-ci.com/tskyles-401-advanced-javascript/data-structures-and-algorithims)
 
