@@ -16,6 +16,7 @@ function breadthFirst(tree){
 
   while(!queue.isEmpty()){
     current = queue.dequeue();
+    console.log(current.value);
     output.push(current.value);
     if(current.left !== null){
       queue.enqueue(current.left);
