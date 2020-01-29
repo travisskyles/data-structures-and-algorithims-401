@@ -25,4 +25,4 @@ Run live-server on /doc files for full code documentation
 
 ## Solution
 
-![](../assets/17-breadthFirst.jpg)
+![](../assets/18-findMaxValue.jpg)
