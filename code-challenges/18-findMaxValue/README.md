@@ -14,11 +14,11 @@ Write an instance method called find-maximum-value. Without utilizing any of the
 
 
 ## Links and Resources
-[link to BinaryTree module]()
+[link to BinaryTree module](https://github.com/tskyles-401-advanced-javascript/data-structures-and-algorithims/tree/master/Data-Structures/BinarySearchTree)
 
-[Submission PR]()
+[Submission PR](https://github.com/tskyles-401-advanced-javascript/data-structures-and-algorithims/pull/15)
 
-[Travis-ci]()
+[Travis-ci](https://travis-ci.com/tskyles-401-advanced-javascript/data-structures-and-algorithims)
 
 #### Documentation
 Run live-server on /doc files for full code documentation

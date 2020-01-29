@@ -13,7 +13,7 @@ describe('findMaxValue function', () => {
     BT.root.right = new Node(9);
     BT.root.right.left = new Node(1);
 
-    expect(findMaxValue(BT)).toBe(10);
+    expect(findMaxValue(BT)).toEqual(10);
   });
   it('should return null with an empty tree', () => {
     const BT = new BinaryTree();
