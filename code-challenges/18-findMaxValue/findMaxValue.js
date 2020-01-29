@@ -1,22 +1,29 @@
 'use strict';
+
+const {BinaryTree} = require('../../Data-Structures/BinarySearchTree/binary-tree');
 /**
  * finds the highest value in a binary tree
- * @param {*} binaryTree
- * @returns value
+ * @class MaxValue
+ * @extends {BinaryTree}
  */
-function findMaxValue(binaryTree){
-  let value = 5;
-  binaryTree.inOrder(current => {
-    if(value === null){
-      value = current;
-    }
-    if(current > value){
-      value = current;
-    }
-  });
-  return value;
+class MaxValue extends BinaryTree {
+  constructor(value){
+    super(value);
+  }
+  findMaxValue(){
+    let value = null;
+    this.inOrder(current => {
+      if(value === null){
+        value = current;
+      }
+      if(current > value){
+        value = current;
+      }
+    });
+    return value;
+  }
 }
 /** 
  * @module findMaxValue
 */
-module.exports = findMaxValue;
+module.exports = MaxValue;

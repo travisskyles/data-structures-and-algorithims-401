@@ -1,24 +1,26 @@
 'use strict';
 
-const {BinaryTree} = require('../../../Data-Structures/BinarySearchTree/binary-tree');
+// const {BinaryTree} = require('../../../Data-Structures/BinarySearchTree/binary-tree');
 const {Node} = require('../../../Data-Structures/BinarySearchTree/binary-tree');
-const findMaxValue = require('../findMaxValue');
+const MaxTree = require('../findMaxValue');
+
+// const bt = new MaxValue(10);
+// console.log(bt);
 
 describe('findMaxValue function', () => {
   it('should return the highest value', () => {
-    const expectedVal = 10;
-    const BT = new BinaryTree(expectedVal);
+    const BT = new MaxTree(10);
     BT.root.left = new Node(4);
     BT.root.left.right = new Node(2);
     BT.root.left.left = new Node(6);
     BT.root.right = new Node(9);
     BT.root.right.left = new Node(1);
-    console.log(findMaxValue(BT));
-    expect(findMaxValue(BT)).toBe(expectedVal);
+    
+    expect(BT.findMaxValue()).toBe(10);
   });
   it('should return null with an empty tree', () => {
-    const BT = new BinaryTree();
+    const BT = new MaxTree();
 
-    expect(findMaxValue(BT)).toBeNull();
+    expect(BT.findMaxValue()).toBeNull();
   });
 });
