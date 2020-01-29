@@ -5,7 +5,7 @@
  * @returns value
  */
 function findMaxValue(binaryTree){
-  let value = null;
+  let value = 5;
   binaryTree.inOrder(current => {
     if(value === null){
       value = current;
