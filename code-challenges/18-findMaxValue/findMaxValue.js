@@ -10,6 +10,10 @@ class MaxValue extends BinaryTree {
   constructor(value){
     super(value);
   }
+  /**
+   * @returns highest value
+   * @memberof MaxValue
+   */
   findMaxValue(){
     let value = null;
     this.inOrder(current => {
