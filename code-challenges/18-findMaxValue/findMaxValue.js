@@ -1,12 +1,16 @@
 'use strict';
 
-module.exports = findMaxValue(binaryTree){
-  const values = binaryTree.inOrder();
-  let current = values[0];
-
-  for(let i = 1; i < values.length; i++){
-    if(values[i] > current) current = values[i];
-  }
-
-  return current;
+function findMaxValue(binaryTree){
+  let value = null;
+  binaryTree.inOrder(current => {
+    if(value === null){
+      value = current;
+    }
+    if(current > value){
+      value = current;
+    }
+  });
+  return value;
 }
+
+module.exports = findMaxValue;
