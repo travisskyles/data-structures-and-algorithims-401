@@ -15,5 +15,9 @@ describe('findMaxValue function', () => {
 
     expect(findMaxValue(BT)).toBe(10);
   });
-  
+  it('should return null with an empty tree', () => {
+    const BT = new BinaryTree();
+
+    expect(findMaxValue(BT)).toBeNull();
+  });
 });
