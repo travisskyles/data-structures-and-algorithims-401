@@ -1,5 +1,9 @@
 'use strict';
-
+/**
+ * finds the highest value in a binary tree
+ * @param {*} binaryTree
+ * @returns value
+ */
 function findMaxValue(binaryTree){
   let value = null;
   binaryTree.inOrder(current => {
@@ -12,5 +16,7 @@ function findMaxValue(binaryTree){
   });
   return value;
 }
-
+/** 
+ * @module findMaxValue
+*/
 module.exports = findMaxValue;
