@@ -34,7 +34,9 @@ describe('binary tree functionality', () => {
     tree.root.left.left = new Node(2);
     tree.root.right = new Node(9);
     tree.root.right.left = new Node(6);
-    expect(tree.preOrder()).toEqual([5, 4, 2, 9, 6]);
+    const arr = [];
+    tree.preOrder(value => arr.push(value));
+    expect(arr).toEqual([5, 4, 2, 9, 6]);
   });
   it('can return an inorder traversal', () => {
     tree = new BinaryTree(5);
@@ -42,7 +44,9 @@ describe('binary tree functionality', () => {
     tree.root.left.left = new Node(2);
     tree.root.right = new Node(9);
     tree.root.right.left = new Node(6);
-    expect(tree.inOrder()).toEqual([ 2, 4, 5, 6, 9 ]);
+    const arr = [];
+    tree.inOrder(value => arr.push(value));
+    expect(arr).toEqual([ 2, 4, 5, 6, 9 ]);
   });
   it('can return an postorder traversal', () => {
     tree = new BinaryTree(5);
@@ -50,7 +54,9 @@ describe('binary tree functionality', () => {
     tree.root.left.left = new Node(2);
     tree.root.right = new Node(9);
     tree.root.right.left = new Node(6);
-    expect(tree.postOrder()).toEqual([ 2, 4, 6, 9, 5 ]);
+    const arr = [];
+    tree.postOrder(value => arr.push(value));
+    expect(arr).toEqual([ 2, 4, 6, 9, 5 ]);
   });
 });
 

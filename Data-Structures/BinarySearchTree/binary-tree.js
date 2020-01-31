@@ -26,19 +26,15 @@ class BinaryTree {
  * @param {*} cb
  * @memberof BinaryTree
  */
-  preOrder(){
-    const results = [];
-
+  preOrder(cb){
     const recursive = node => {
       if(node){
-        results.push(node.value);
+        cb(node.value);
         recursive(node.left);
         recursive(node.right);
       }
     };
     recursive(this.root);
-    return results;
-
   }
   /**
  *
@@ -46,18 +42,15 @@ class BinaryTree {
  * @param {*} cb
  * @memberof BinaryTree
  */
-  inOrder(){
-    const results = [];
-
+  inOrder(cb){
     const recursive = node => {
       if(node){
         recursive(node.left);
-        results.push(node.value);
+        cb(node.value);
         recursive(node.right);
       }
     };
     recursive(this.root);
-    return results;
   }
   /**
    *
@@ -65,18 +58,15 @@ class BinaryTree {
    * @param {*} cb
    * @memberof BinaryTree
    */
-  postOrder(){
-    const results = [];
-
+  postOrder(cb){
     const recursive = node => {
       if(node){
         recursive(node.left);
         recursive(node.right);
-        results.push(node.value);
+        cb(node.value);
       }
     };
     recursive(this.root);
-    return results;
   }
 }
 /**

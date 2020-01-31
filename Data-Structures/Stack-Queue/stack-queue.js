@@ -83,6 +83,7 @@ class Queue {
   constructor(){
     this.front = null;
     this.back = null;
+    this.length = 0;
   }
   /**
    *  Adds node to the back of the queue
@@ -92,12 +93,14 @@ class Queue {
    */
   enqueue(value){
     let newNode = new Node(value);
-    if(this.front === null){
+    if(!this.front){
       this.front = newNode;
       this.back = newNode;
     }
     this.back.next = newNode;
     this.back = newNode;
+    this.back.next = null;
+    this.length++;
   }
   /**
    * Removes a node from the fron of the queue and returns the value
@@ -106,6 +109,7 @@ class Queue {
    */
   dequeue(){
     let tempNode;
+    let val = this.front;
 
     if(this.front === null){
       return null;
@@ -113,7 +117,8 @@ class Queue {
     tempNode = this.front;
     this.front = this.front.next;
     tempNode.next = null;
-    
+    this.length--;
+    return val.value;
   }
   /**
    * Returns the value fo the node at the front of the queue
