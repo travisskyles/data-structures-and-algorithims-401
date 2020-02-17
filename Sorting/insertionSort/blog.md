@@ -1,3 +1,21 @@
+SELECTION SORT
+
+PSUEDO CODE
+
+    InsertionSort(int[] arr)
+
+      FOR i = 1 to arr.length
+      
+        int j <-- i - 1
+        int temp <-- arr[i]
+        
+        WHILE j >= 0 AND temp < arr[j]
+          arr[j + 1] <-- arr[j]
+          j <-- j - 1
+          
+        arr[j + 1] <-- temp
+
+
 ![](./assets/step1.jpg)
 In the first pass through we start at index position 1 of the array. We set a j value to be our index value minus 1 and set a temp variable to be equal to the value at the current index position. Then we check to see if our j value is equal or greater than 0 and our temp value is smaller than the value at index j. In this case it is so we set our value at index 1 to be the value at index j. Then we set j to be 1 less than the current value and then set the value at index j + 1 to be the stored temp value.
 ![](./assets/step2_3.jpg)
