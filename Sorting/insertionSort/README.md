@@ -8,5 +8,6 @@ Review the psudeo code and step through the process for the given sample array. 
 The efficiency for time of this solution will be near O(n) at best and O(n^2) at worst. For space it will be O(n).
 
 ## Solution
-[code]()
-[blog]()
+[code](https://github.com/tskyles-401-advanced-javascript/data-structures-and-algorithims/blob/master/Sorting/insertionSort/insertionSort.js)
+
+[blog](https://github.com/tskyles-401-advanced-javascript/data-structures-and-algorithims/blob/master/Sorting/insertionSort/blog.md)
