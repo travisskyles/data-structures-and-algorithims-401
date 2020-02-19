@@ -3,8 +3,8 @@
 function quickSort(arr, left, right){
   if(left < right){
     let pivot = partition(arr, left, right);
-    quickSort(arr, left, pivot -1);
     quickSort(arr, pivot + 1, right);
+    quickSort(arr, left, pivot -1);
   }
 }
 
