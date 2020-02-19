@@ -3,7 +3,6 @@
 function quickSort(arr, left, right){
   if(left < right){
     let pivot = partition(arr, left, right);
-    console.log(pivot);
     quickSort(arr, left, pivot -1);
     quickSort(arr, pivot + 1, right);
   }
@@ -35,9 +34,5 @@ function swap(arr, first, second){
   arr[first] = arr[second];
   arr[second] = temp;
 }
-
-const arr = [5, 3, 9, 59, 0];
-quickSort(arr, 0, arr.length - 1);
-console.log(arr);
 
 module.exports = quickSort;
