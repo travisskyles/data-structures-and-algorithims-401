@@ -1,14 +1,19 @@
 'use strict';
 
 function merge(arr){
-  if(arr.length <= 1) return arr;
+  if(arr.length <= 1) {
+    return arr;
+  }
+
   let mid = Math.floor(arr.length/2);
   let left = merge( arr.slice(0, mid));
   let right = merge(arr.slice(mid));
+
   function mergeSort(arr1, arr2) {
     let result = [];
     let i=0;
     let j=0;
+
     while(i< arr1.length && j < arr2.length) {
       if(arr1[i] < arr2[j]){
         result.push(arr1[i]);
@@ -31,7 +36,4 @@ function merge(arr){
   return mergeSort(left,right);
 }
 
-
-let array = [8,4,23,42,16,15];
-
-console.log(merge(array));
+module.exports = merge;
