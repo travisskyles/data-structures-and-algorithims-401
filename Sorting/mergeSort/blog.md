@@ -48,3 +48,6 @@ Merge sort uses a divide and conquer approach to sort data. It begins by breakin
 Time: O(n log n)
 
 Space: O(n)
+
+## Testing
+[Link to Travis-ci](https://travis-ci.com/tskyles-401-advanced-javascript/data-structures-and-algorithims/builds/149751937)
