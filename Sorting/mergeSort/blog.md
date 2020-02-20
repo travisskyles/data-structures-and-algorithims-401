@@ -50,4 +50,4 @@ Time: O(n log n)
 Space: O(n)
 
 ## Testing
-[Link to Travis-ci](https://travis-ci.com/tskyles-401-advanced-javascript/data-structures-and-algorithims/builds/149696346)
+[Link to Travis-ci](https://travis-ci.com/tskyles-401-advanced-javascript/data-structures-and-algorithims/builds/149751937)
