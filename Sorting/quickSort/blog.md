@@ -57,3 +57,6 @@ Now quickSort is called on the final sub array and the same processes are repeat
 Time: O(n log n)
 
 Space: O(log n)
+
+## Testing
+[Link to Travis-ci](https://travis-ci.com/tskyles-401-advanced-javascript/data-structures-and-algorithims/builds/149751937)
