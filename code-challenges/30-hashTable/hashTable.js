@@ -39,4 +39,26 @@ class LinkedList {
   }
 }
 
+class Hashmap {
+  constructor(size){
+    this.size = size;
+    this.map = new Array(size);
+  }
 
+  hash(key){
+    return key.split('').reduce((p,n) => {
+      return p + n.charCodeAt(0);
+    }, 0) * 599 % this.size;
+  }
+
+  set(key, value){
+    let hash = this.hash(key);
+    if(!this.map[hash]){
+      this.map[hash] = new LinkedList();
+    }
+    let entry = { [key] : value };
+    this.map[hash].add(entry);
+  }
+
+
+}
