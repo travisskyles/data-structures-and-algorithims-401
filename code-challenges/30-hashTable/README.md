@@ -14,6 +14,18 @@ Implement a Hashtable with the following methods:
 ## Approach & Efficiency
 * findMaxValue - O(n)
 
+## API
+### LinkedList
+* `add(value)` - Adds a node to the linked list
+* `getKey(key)` - Returns value of key
+* `values()` - Retrieves all values from hashmap
+
+### Hash Table
+* `hash(key)` - Hashes key and returns hashed value
+* `add(key, value)` - Adds key/value pair to hash table
+* `get(key)` - Returns value of key
+* `contains(key)` - Returns boolean if hash table contains key
+
 ## Links and Resources
 
 [Submission PR]()
