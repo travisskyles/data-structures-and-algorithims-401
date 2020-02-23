@@ -28,15 +28,28 @@ class LinkedList {
     current.next = nn;
   }
 
-  values(){
-    let values = [];
+  getKey(key){
+    if(!this.head) return;
     let current = this.head;
     while(current){
+      if(current.value[0] === key) return current.value[1];
+      current = current.next;
+    }
+    return;
+  }
+
+  values() {
+    let values = [];
+    let current = this.head;
+
+    while(current) {
       values.push(current.value);
       current = current.next;
     }
+
     return values;
   }
+}
 }
 
 class Hashmap {
@@ -51,7 +64,7 @@ class Hashmap {
     }, 0) * 599 % this.size;
   }
 
-  set(key, value){
+  add(key, value){
     let hash = this.hash(key);
     if(!this.map[hash]){
       this.map[hash] = new LinkedList();
@@ -60,5 +73,7 @@ class Hashmap {
     this.map[hash].add(entry);
   }
 
-
+  get(key){
+    
+  }
 }
