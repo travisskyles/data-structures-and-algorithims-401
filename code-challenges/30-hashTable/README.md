@@ -28,9 +28,9 @@ Implement a Hashtable with the following methods:
 
 ## Links and Resources
 
-[Submission PR]()
+[Submission PR](https://github.com/tskyles-401-advanced-javascript/data-structures-and-algorithims/pull/19)
 
-[Travis-ci]()
+[Travis-ci](https://travis-ci.com/tskyles-401-advanced-javascript/data-structures-and-algorithims)
 
 #### Documentation
 Run live-server on /doc files for full code documentation
