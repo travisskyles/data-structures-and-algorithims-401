@@ -60,4 +60,49 @@ describe('Hashmap', () => {
       expect(Hash.map[hashedKey].head.next.value['test']).toBe('test2');
     });
   });
+  describe('Hashmap.get(key)', () => {
+    it('Given a key, should return the value', () => {
+      let Hash = new Hashmap(5);
+
+      Hash.add('test', 'value');
+
+      expect(Hash.get('test')).toBe('value');
+    });
+
+    it('Should return null if key does not exist', () => {
+      let HashTable = new Hashmap(5);
+
+      HashTable.add('test', 'value');
+
+      expect(HashTable.get('abcdefg')).toBe(null);
+    });
+
+    it('Should return the value from a bucket within a HashTable that has a collision', () => {
+      let Hash = new Hashmap(5);
+
+      Hash.add('test', 'value');
+      Hash.add('tset', 'value2');
+
+      expect(Hash.get('test')).toBe('value');
+      expect(Hash.get('tset')).toBe('value2');
+    });
+  });
+
+  describe('Hashmap.contains(key)', () => {
+    test('Should return true if the key exists', () => {
+      let HashTable = new Hashmap(5);
+
+      HashTable.add('test', 'value');
+
+      expect(HashTable.contains('test')).toBeTruthy();
+    });
+
+    test('Should return false if the key does not exists', () => {
+      let HashTable = new Hashmap(5);
+
+      HashTable.add('test', 'value');
+
+      expect(HashTable.contains('gdsahatgdga')).not.toBeTruthy();
+    });
+  });
 });

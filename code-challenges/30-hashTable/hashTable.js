@@ -32,7 +32,7 @@ class LinkedList {
     if(!this.head) return;
     let current = this.head;
     while(current){
-      if(current.value[0] === key) return current.value[1];
+      if(Object.keys(current.value)[0] === key) return current.value[key];
       current = current.next;
     }
     return;
@@ -78,6 +78,7 @@ class Hashmap {
     if(!this.map[index]){
       return null;
     }
+    // console.log(this.map[index].getKey(key));
     return this.map[index].getKey(key);
   }
 
