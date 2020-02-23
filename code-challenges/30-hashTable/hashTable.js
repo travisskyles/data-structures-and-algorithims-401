@@ -74,6 +74,11 @@ class Hashmap {
   }
 
   get(key){
-    
+    if(!key) throw new Error('Invalid key');
+    let index = this.hash(key);
+    if(this.map[index]){
+      return null;
+    }
+    return this.map[index].getKey(key);
   }
 }
