@@ -50,7 +50,6 @@ class LinkedList {
     return values;
   }
 }
-}
 
 class Hashmap {
   constructor(size){
