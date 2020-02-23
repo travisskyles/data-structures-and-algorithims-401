@@ -76,9 +76,20 @@ class Hashmap {
   get(key){
     if(!key) throw new Error('Invalid key');
     let index = this.hash(key);
-    if(this.map[index]){
+    if(!this.map[index]){
       return null;
     }
     return this.map[index].getKey(key);
   }
+
+  contains(key){
+    if(!key) throw new Error('Invalid key');
+    let index = this.hash(key);
+    if(!this.map[index]){
+      return null;
+    }
+    return this.map[index].getKey? true: false;
+  }
 }
+
+module.exports = {LinkedList, Hashmap};
