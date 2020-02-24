@@ -45,4 +45,4 @@ function repeatedWord(string){
   }
 }
 
-module.exports = {split, repeatedWord, wordCount};
+module.exports = {split, repeatedWord};

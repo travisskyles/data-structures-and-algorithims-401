@@ -16,9 +16,9 @@ Write a function that takes in a long string. It should return the whatever word
 
 ## Links and Resources
 
-[Submission PR]()
+[Submission PR](https://github.com/tskyles-401-advanced-javascript/data-structures-and-algorithims/pull/20)
 
-[Travis-ci]()
+[Travis-ci](https://travis-ci.com/tskyles-401-advanced-javascript/data-structures-and-algorithims)
 
 #### Documentation
 Run live-server on /doc files for full code documentation
