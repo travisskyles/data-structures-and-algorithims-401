@@ -37,4 +37,5 @@ Run live-server on /doc files for full code documentation
 
 ## Solution
 
-![]()
+![](../assets/hash-1.jpg)
+![](../assets/hash-2.jpg)
