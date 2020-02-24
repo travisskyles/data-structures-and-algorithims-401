@@ -1,5 +1,12 @@
 'use strict';
 
+/**
+ * Splits a string by a stated delimiter and pushes each section into an array
+ * @param {string} string
+ * @param {string} delimiter
+ * @returns {array} array of strings
+ */
+
 function split(string, delimiter) {
   const stringArray = [''];
   let j = 0;
@@ -14,6 +21,12 @@ function split(string, delimiter) {
   }
   return stringArray;
 }
+
+/**
+ * Finds the first repeated word in a string of words
+ * @param {*} string long string of words
+ * @returns {string} first repeated word
+ */
 
 function repeatedWord(string){
   let temp;
