@@ -1,6 +1,6 @@
 'use strict';
 
-const {split, repeatedWord} = require('../repeatedWord');
+const {split, repeatedWord, wordCount} = require('../repeatedWord');
 
 describe('split functionality', () => {
   it('should push the whole string into 1 index if there is no delimiter', () => {

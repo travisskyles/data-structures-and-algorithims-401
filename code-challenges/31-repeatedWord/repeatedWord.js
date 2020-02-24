@@ -12,7 +12,7 @@ function split(string, delimiter) {
   let j = 0;
 
   for (let i = 0; i < string.length; i++) {
-    if (string.charAt(i) == delimiter) {
+    if (string.charAt(i) === delimiter) {
       j++;
       stringArray.push('');
     } else {
@@ -45,19 +45,4 @@ function repeatedWord(string){
   }
 }
 
-function wordCount(string){
-  const wordsLower = string.toLowerCase();
-  const words = split(wordsLower, ' ');
-  const countObj = {};
-
-  words.forEach(word => {
-    countObj[word] = 0;
-  });
-
-  for(let i = 0; i < words.length; i++){
-    countObj[words[i]] = countObj[words[i]] + 1;
-  }
-  return countObj;
-}
-
-module.exports = {split, repeatedWord};
+module.exports = {split, repeatedWord, wordCount};
