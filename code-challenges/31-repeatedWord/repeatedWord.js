@@ -36,13 +36,28 @@ function repeatedWord(string){
 
   if(words.length <= 1) return null;
 
-  while(count <= words.length -1){
+  while(count < words.length){
     temp = words[count];
     for(let i = count + 1; i <= words.length -1; i++){
       if(temp === words[i]) return temp;
     }
     count++;
   }
+}
+
+function wordCount(string){
+  const wordsLower = string.toLowerCase();
+  const words = split(wordsLower, ' ');
+  const countObj = {};
+
+  words.forEach(word => {
+    countObj[word] = 0;
+  });
+
+  for(let i = 0; i < words.length; i++){
+    countObj[words[i]] = countObj[words[i]] + 1;
+  }
+  return countObj;
 }
 
 module.exports = {split, repeatedWord};
