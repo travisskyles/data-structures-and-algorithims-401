@@ -15,3 +15,27 @@ const treeIntersection = (btA, btB) => {
   return result;
 
 };
+
+const _addToHash = (bt, ht) => {
+  let arrayOfNumbers = bt.postOrder();
+  arrayOfNumbers.forEach(element => {
+    let key = element.toString();
+    ht.add(key, element);
+  });
+};
+
+const _getDuplicates = (root, ht) => {
+  let result= [];
+  let _walk = node => {
+    if (node.left) _walk(node.left); // L
+    if (node.right) _walk(node.right); // R
+    let key = node.value.toString();
+    if(ht.contains(key)){
+      result.push(node.value);
+    } // Ro
+
+  };
+  _walk(root);
+
+  return result;
+};
