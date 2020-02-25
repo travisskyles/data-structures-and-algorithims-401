@@ -1,43 +1,65 @@
 'use strict';
 
-const {Hashmap} = require('../../30-hashTable/hashTable');
+const treeIntersection = require('../../32-treeIntersection/treeIntersection');
+const {BinaryTree, Node} = require('../../../Data-Structures/BinarySearchTree/binary-tree');
 
-const treeIntersection = (btA, btB) => {
-  let ht = new Hashmap();
+describe('treeIntersection funcitonality', () => {
 
-  if(btA.root === null || btB.root === null){
-    throw new Error('No root value');
-  }
-  _addToHash(btA, ht);
+  it('should throw an error if on of the trees is empty', () => {
+    let btA = new BinaryTree();
+    let btB = new BinaryTree(10);
 
-  let result = _getDuplicates(btB.root, ht);
+    btB.root.left = new Node(9);
+    btB.root.left.left = new Node(5);
+    btB.root.left.right = new Node(12);
+    btB.root.right = new Node(6);
+    btB.root.right.right = new Node(1);
 
-  return result;
-
-};
-
-const _addToHash = (bt, ht) => {
-  let arrayOfNumbers = bt.postOrder();
-  arrayOfNumbers.forEach(element => {
-    let key = element.toString();
-    ht.add(key, element);
+    expect(treeIntersection(btA, btB)).toBe(null);
   });
-};
+  it('should return with some matches', () => {
+    let btA = new BinaryTree(3);
+    let btB = new BinaryTree(7);
 
-const _getDuplicates = (root, ht) => {
-  let result= [];
-  let _walk = node => {
-    if (node.left) _walk(node.left); // L
-    if (node.right) _walk(node.right); // R
-    let key = node.value.toString();
-    if(ht.contains(key)){
-      result.push(node.value);
-    } // Ro
+    btA.root.left = new Node(9);
+    btA.root.left.right = new Node(12);
+    btA.root.right = new Node(6);
 
-  };
-  _walk(root);
+    btB.root.left = new Node(9);
+    btB.root.left.left = new Node(5);
+    btB.root.left.right = new Node(12);
+    btB.root.right = new Node(6);
+    btB.root.right.right = new Node(1);
 
-  return result;
-};
+    expect(treeIntersection(btA, btB)).toEqual([12, 9, 1, 6]);
+  });
+  it('should return with all matches', () => {
+    let btA = new BinaryTree(7);
+    let btB = new BinaryTree(7);
 
-module.exports = treeIntersection;
+    btA.root.left = new Node(9);
+    btA.root.left.right = new Node(12);
+    btA.root.right = new Node(6);
+
+    btB.root.left = new Node(9);
+    btB.root.left.right = new Node(12);
+    btB.root.right = new Node(6);
+
+    expect(treeIntersection(btA, btB)).toEqual([12, 9, 6, 7]);
+  });
+
+  it('should return with no matches', () => {
+    let btA = new BinaryTree(1);
+    let btB = new BinaryTree(7);
+
+    btA.root.left = new Node(2);
+    btA.root.left.right = new Node(3);
+    btA.root.right = new Node(4);
+
+    btB.root.left = new Node(5);
+    btB.root.left.right = new Node(8);
+    btB.root.right = new Node(6);
+
+    expect(treeIntersection(btA, btB)).toEqual([]);
+  });
+});
