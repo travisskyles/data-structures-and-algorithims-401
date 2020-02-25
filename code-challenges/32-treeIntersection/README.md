@@ -1,22 +1,24 @@
 # Tree Intersection Challenge
 
-Find common values in 2 binary trees..
+Find common values in 2 binary trees.
 
 ## Challenge
 
 Write a function called treeIntersection that takes in two binary tree parameters and returns all of the matching values.
 
 ## Approach & Efficiency
-* `split(string, delimiter)` - O(1)
-* `repeatedWord(string)` - O(n)
+* `treeIntersection` - 0(2n)
+* `_addToHash` - O(n)
+* `_getDuplicates` - O(n)
 
 ## API
-* `split(string, delimiter)` - Splits the string at the delimiter and pushes each split into an array
-* `repeatedWord(string)` - Finds the first repeated word in a string of words
+* `treeIntersection(btA, btB)` - Takes in two binary trees and outputs any matching values.
+* `_addToHash(bt, ht)` - takes in a binary tree and hash table and inserts values of tree into table.
+* `_getDuplicates(root, ht)` - Takes in binary tree root and hash table and compares the tree to the values in the hash table. Returns array of matching values. 
 
 ## Links and Resources
 
-[Submission PR](https://github.com/tskyles-401-advanced-javascript/data-structures-and-algorithims/pull/20)
+[Submission PR](https://github.com/tskyles-401-advanced-javascript/data-structures-and-algorithims/pull/21)
 
 [Travis-ci](https://travis-ci.com/tskyles-401-advanced-javascript/data-structures-and-algorithims)
 
@@ -25,5 +27,5 @@ Run live-server on /doc files for full code documentation
 
 ## Solution
 
-![](../assets/.jpg)
+![](../assets/32-treeIntersection.jpg)
 

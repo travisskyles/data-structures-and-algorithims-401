@@ -1,12 +1,12 @@
 'use strict';
 
-const {Hashmap} = require('../../30-hashTable/hashTable');
+const {Hashmap} = require('../30-hashTable/hashTable');
 
 const treeIntersection = (btA, btB) => {
   let ht = new Hashmap();
 
-  if(btA.root === null || btB.root === null){
-    throw new Error('No root value');
+  if(btA.root.value === null || btB.root.value === null){
+    return null;
   }
   _addToHash(btA, ht);
 
@@ -17,8 +17,7 @@ const treeIntersection = (btA, btB) => {
 };
 
 const _addToHash = (bt, ht) => {
-  let arrayOfNumbers = bt.postOrder();
-  arrayOfNumbers.forEach(element => {
+  bt.postOrder(element => {
     let key = element.toString();
     ht.add(key, element);
   });
@@ -27,13 +26,14 @@ const _addToHash = (bt, ht) => {
 const _getDuplicates = (root, ht) => {
   let result= [];
   let _walk = node => {
-    if (node.left) _walk(node.left); // L
-    if (node.right) _walk(node.right); // R
+    if (node.left) _walk(node.left);
+    if (node.right) _walk(node.right);
     let key = node.value.toString();
     if(ht.contains(key)){
+      console.log(ht);
       result.push(node.value);
-    } // Ro
-
+      console.log(ht.contains(key), result);
+    }
   };
   _walk(root);
 
