@@ -7,8 +7,6 @@ describe('leftJoin functionality', () => {
   it('returns null if no maps are inputed', () => {
     expect(leftJoin()).toBe(null);
   });
-    expect(leftJoin(hashA)).toEqual(result);
-  });
   it('outputs an object that has values from matching keys from both inputs', () => {
     let hashA = new Hashmap(10);
     let hashB = new Hashmap(10);
