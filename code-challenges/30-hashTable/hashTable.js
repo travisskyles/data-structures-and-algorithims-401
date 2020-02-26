@@ -69,7 +69,7 @@ class LinkedList {
  */
 class Hashmap {
   constructor(size){
-    this.size = size;
+    this.size = size || 10;
     this.map = new Array(size);
   }
   /**
