@@ -124,7 +124,9 @@ describe('graph functionality', () => {
     });
 
     test('returns null if startVertex is not an object', () => {
+      let vertex1 = 1;
 
+      expect(graph.breadthFirst(vertex1)).toEqual(null);
     });
   });
 });
