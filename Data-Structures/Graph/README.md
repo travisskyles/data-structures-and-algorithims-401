@@ -24,8 +24,8 @@ The approaches I used use different efficiencies. Overall, I store all my graph 
 * `size()` - Returns the total number of nodes in the graph
 
 ### Links and Resources
-* [submission PR]()
-* [travis-ci]()
+* [submission PR](https://github.com/tskyles-401-advanced-javascript/data-structures-and-algorithims/pull/23)
+* [travis-ci](https://travis-ci.com/tskyles-401-advanced-javascript/data-structures-and-algorithims)
 
 #### Documentation
 Run live-server on /doc files for full code documentation
