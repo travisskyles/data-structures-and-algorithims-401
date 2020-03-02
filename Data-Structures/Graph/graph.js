@@ -5,6 +5,7 @@
 class Vertex {
   constructor(value){
     this.value = value;
+    this.visited = false;
   }
 }
 /**
@@ -91,6 +92,10 @@ class Graph {
  */
   getSize(){
     return this.listSize;
+  }
+
+  breadthFirst(startNode){
+
   }
 
 }
