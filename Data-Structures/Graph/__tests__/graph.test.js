@@ -128,6 +128,12 @@ describe('graph functionality', () => {
 
       expect(graph.breadthFirst(vertex1)).toEqual(null);
     });
+
+    test('returns null if graph is empty', () => {
+      let vertex1 = new Vertex('One');
+
+      expect(graph.breadthFirst(vertex1)).toEqual(null);
+    });
   });
 });
 
