@@ -92,6 +92,45 @@ class Graph {
   getSize(){
     return this.listSize;
   }
+  /**
+ * Traverses the graph in a breadth first fashion
+ * @param {object} startVertex
+ * @returns {array} list of nodes in breadth first order
+ * @memberof Graph
+ */
+  breadthFirst(startVertex){
+    if (this.listSize === 0 || typeof startVertex !== 'object') return null;
+
+    let visitedVertices = new Set();
+    let queue = [];
+    let results = [];
+
+    queue.push(startVertex);
+    visitedVertices.add(startVertex);
+
+    while(queue.length){
+      let deQueue = queue.shift();
+
+      results.push(deQueue);
+      visitedVertices.add(deQueue);
+
+      const neighbors = this.getNeighbors(deQueue);
+
+      for(let k of neighbors){
+        let neighbor = k.vertex;
+
+        if(visitedVertices.has(neighbor)){
+          continue;
+        }else{
+          visitedVertices.add(neighbor);
+        }
+
+        queue.push(neighbor);
+      }
+    }
+    
+    return results;
+  }
 
 }
 
