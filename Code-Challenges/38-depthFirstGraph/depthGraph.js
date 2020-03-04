@@ -1,5 +1,8 @@
 'use strict';
-
+/**
+ * @param {object} graph
+ * @returns {array} array of value in depth first order
+ */
 function depthFirst(graph){
   if (typeof graph !== 'object' || graph.listSize === 0) return null;
 
@@ -14,20 +17,22 @@ function depthFirst(graph){
 
   while(stack.length){
     let current = stack.pop();
-    let neighbors = current.getNeighbors(current);
-    results.push(current);
+    console.log(current);
+    let neighbors = graph.getNeighbors(current);
+    results.push(current.value);
 
-    for(let neighbor in neighbors){
+    for(let neighbor of neighbors){
+      console.log('neighbor', neighbor);
       let neighborVertex = neighbor.vertex;
-      if(visited.includes(neighborVertex)){
+      if(visited.has(neighborVertex)){
         continue;
       }else {
         visited.add(neighborVertex);
       }
-      stack.push(neighbor);
+      stack.push(neighborVertex);
     }
   }
   return results;
 }
 
-export default depthFirst;
+module.exports = depthFirst;
