@@ -27,6 +27,8 @@
 
 [Code Challenge 33: Left Join](https://github.com/tskyles-401-advanced-javascript/data-structures-and-algorithims/tree/master/code-challenges/33-leftJoin)
 
+[Code Challenge 37: Get Edge](https://github.com/tskyles-401-advanced-javascript/data-structures-and-algorithims/tree/master/Code-Challenges/37-getEdges)
+
 ## Data Structures
 
 [Linked Lists](https://github.com/tskyles-401-advanced-javascript/data-structures-and-algorithims/tree/master/Data-Structures)
@@ -36,6 +38,8 @@
 [Binary Trees](https://github.com/tskyles-401-advanced-javascript/data-structures-and-algorithims/tree/master/Data-Structures/BinarySearchTree)
 
 [Hash Table](https://github.com/tskyles-401-advanced-javascript/data-structures-and-algorithims/tree/master/code-challenges/30-hashTable)
+
+[Graph](https://github.com/tskyles-401-advanced-javascript/data-structures-and-algorithims/tree/master/Data-Structures/Graph)
 
 ## Sorting
 
