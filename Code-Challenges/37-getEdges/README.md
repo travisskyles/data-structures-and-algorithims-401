@@ -15,7 +15,7 @@ Write a function based on the specifications above, which takes in a graph, and 
 
 ## Links and Resources
 
-[Submission PR](https://github.com/tskyles-401-advanced-javascript/data-structures-and-algorithims/pull/2)
+[Submission PR](https://github.com/tskyles-401-advanced-javascript/data-structures-and-algorithims/pull/25)
 
 [Travis-ci](https://travis-ci.com/tskyles-401-advanced-javascript/data-structures-and-algorithims)
 
