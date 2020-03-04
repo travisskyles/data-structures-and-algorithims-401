@@ -40,21 +40,21 @@ describe('graph functionality', () => {
     graph.addVertex(vertex8);
 
     graph.addDirectedEdge(vertex1,vertex2);
-    graph.addDirectedEdge(vertex2,vertex1);
+    // graph.addDirectedEdge(vertex2,vertex1);
     graph.addDirectedEdge(vertex2,vertex3);
-    graph.addDirectedEdge(vertex3,vertex2);
+    // graph.addDirectedEdge(vertex3,vertex2);
     graph.addDirectedEdge(vertex3,vertex7);
-    graph.addDirectedEdge(vertex7,vertex3);
+    // graph.addDirectedEdge(vertex7,vertex3);
     graph.addDirectedEdge(vertex2,vertex4);
-    graph.addDirectedEdge(vertex4,vertex2);
+    // graph.addDirectedEdge(vertex4,vertex2);
     graph.addDirectedEdge(vertex1,vertex4);
-    graph.addDirectedEdge(vertex4,vertex1);
+    // graph.addDirectedEdge(vertex4,vertex1);
     graph.addDirectedEdge(vertex4,vertex5);
-    graph.addDirectedEdge(vertex5,vertex4);
+    // graph.addDirectedEdge(vertex5,vertex4);
     graph.addDirectedEdge(vertex4,vertex6);
-    graph.addDirectedEdge(vertex6,vertex4);
+    // graph.addDirectedEdge(vertex6,vertex4);
     graph.addDirectedEdge(vertex4,vertex8);
-    graph.addDirectedEdge(vertex8,vertex4);
+    // graph.addDirectedEdge(vertex8,vertex4);
   });
 
   describe('depth first travel', () => {
@@ -65,11 +65,11 @@ describe('graph functionality', () => {
     });
 
     it('returns null if input is not a graph', () => {
-      
+      expect(depthFirst('hello')).toBe(null);
     });
 
     it('should return a list of values in depth first order', () => {
-
+      expect(depthFirst(graph)).toEqual([1,4,8,6,5,2,3,7]);
     });
 
   });
