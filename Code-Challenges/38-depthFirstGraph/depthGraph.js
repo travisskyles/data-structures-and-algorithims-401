@@ -1,6 +1,8 @@
 'use strict';
 
 function depthFirst(graph){
+  if (typeof graph !== 'object' || graph.listSize === 0) return null;
+
   const stack = [];
   const visited = new Set();
   const results = [];
@@ -27,3 +29,5 @@ function depthFirst(graph){
   }
   return results;
 }
+
+export default depthFirst;
