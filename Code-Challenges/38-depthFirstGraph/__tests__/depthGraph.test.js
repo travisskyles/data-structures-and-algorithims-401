@@ -39,27 +39,29 @@ describe('graph functionality', () => {
     graph.addVertex(vertex7);
     graph.addVertex(vertex8);
 
-    graph.addDirectedEdge(1,2);
-    graph.addDirectedEdge(2,1);
-    graph.addDirectedEdge(2,3);
-    graph.addDirectedEdge(3,2);
-    graph.addDirectedEdge(3,7);
-    graph.addDirectedEdge(7,3);
-    graph.addDirectedEdge(2,4);
-    graph.addDirectedEdge(4,2);
-    graph.addDirectedEdge(1,4);
-    graph.addDirectedEdge(4,1);
-    graph.addDirectedEdge(4,5);
-    graph.addDirectedEdge(5,4);
-    graph.addDirectedEdge(4,6);
-    graph.addDirectedEdge(6,4);
-    graph.addDirectedEdge(4,8);
-    graph.addDirectedEdge(8,4);
+    graph.addDirectedEdge(vertex1,vertex2);
+    graph.addDirectedEdge(vertex2,vertex1);
+    graph.addDirectedEdge(vertex2,vertex3);
+    graph.addDirectedEdge(vertex3,vertex2);
+    graph.addDirectedEdge(vertex3,vertex7);
+    graph.addDirectedEdge(vertex7,vertex3);
+    graph.addDirectedEdge(vertex2,vertex4);
+    graph.addDirectedEdge(vertex4,vertex2);
+    graph.addDirectedEdge(vertex1,vertex4);
+    graph.addDirectedEdge(vertex4,vertex1);
+    graph.addDirectedEdge(vertex4,vertex5);
+    graph.addDirectedEdge(vertex5,vertex4);
+    graph.addDirectedEdge(vertex4,vertex6);
+    graph.addDirectedEdge(vertex6,vertex4);
+    graph.addDirectedEdge(vertex4,vertex8);
+    graph.addDirectedEdge(vertex8,vertex4);
   });
 
   describe('depth first travel', () => {
     it('should return null if graph is empty', () => {
+      graph = new Graph();
 
+      expect(depthFirst(graph)).toBe(null);
     });
 
     it('returns null if input is not a graph', () => {
